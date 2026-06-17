@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Astra Dental Clinic Logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0F4C81"/>
+      <stop offset="1" stop-color="#2CB1BC"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="44" fill="#F7FAFC"/>
+  <path d="M128 38c33 0 60 27 60 60v10c0 45-29 79-60 110-31-31-60-65-60-110V98c0-33 27-60 60-60z" fill="url(#g)"/>
+  <path d="M128 72c13 0 24 11 24 24s-11 24-24 24-24-11-24-24 11-24 24-24z" fill="#fff"/>
+  <path d="M89 163h78v17H89z" fill="#fff" opacity=".95"/>
+</svg>
