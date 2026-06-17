@@ -1,0 +1,43 @@
+/**
+ * Astra Dental Clinic Website
+ * Author: Justonclik Team
+ * Copyright (c) Justonclik 2026
+ * All Rights Reserved
+ * Contact: justonclick@2026
+ */
+
+export const doctors = [
+  {
+    id: 1,
+    name: 'Dr. Ananya Mehta',
+    qualification: 'MDS Prosthodontics & Implantology',
+    experience: '16 Years',
+    specialization: 'Dental Implants, Full Mouth Rehabilitation',
+    memberships: ['Indian Dental Association', 'ISOI'],
+    languages: ['English', 'Hindi', 'Marathi'],
+    bio: 'Dr. Mehta leads implant rehabilitation and complex restorative cases with a strong focus on long-term function and natural aesthetics.',
+    image: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 2,
+    name: 'Dr. Rohan Kulkarni',
+    qualification: 'MDS Endodontics',
+    experience: '13 Years',
+    specialization: 'Root Canal Treatment, Microscopic Dentistry',
+    memberships: ['Indian Endodontic Society'],
+    languages: ['English', 'Hindi'],
+    bio: 'Dr. Kulkarni specializes in pain-free root canal procedures and microscopic endodontic protocols for predictable outcomes.',
+    image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    id: 3,
+    name: 'Dr. Sana Qureshi',
+    qualification: 'MDS Orthodontics',
+    experience: '11 Years',
+    specialization: 'Braces, Aligners, Smile Alignment',
+    memberships: ['Indian Orthodontic Society'],
+    languages: ['English', 'Hindi', 'Urdu'],
+    bio: 'Dr. Qureshi designs customized orthodontic plans for teens and adults with attention to facial profile and smile balance.',
+    image: 'https://images.unsplash.com/photo-1594824475317-6ccddf7f7f1c?auto=format&fit=crop&w=800&q=80',
+  },
+]

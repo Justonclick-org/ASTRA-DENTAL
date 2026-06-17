@@ -1,0 +1,45 @@
+/**
+ * Astra Dental Clinic Website
+ * Author: Justonclik Team
+ * Copyright (c) Justonclik 2026
+ * All Rights Reserved
+ * Contact: justonclick@2026
+ */
+
+export const videos = [
+  {
+    title: 'Clinic Tour',
+    category: 'Clinic Tour',
+    thumbnail:
+      'https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+  },
+  {
+    title: 'Doctor Introduction',
+    category: 'Doctor Insights',
+    thumbnail:
+      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ',
+  },
+  {
+    title: 'Treatment Explanation: Implants',
+    category: 'Patient Education',
+    thumbnail:
+      'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  },
+  {
+    title: 'Patient Story',
+    category: 'Patient Testimonials',
+    thumbnail:
+      'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://www.youtube.com/watch?v=ScMzIvxBSi4',
+  },
+  {
+    title: 'Oral Health Tips',
+    category: 'Oral Health Tips',
+    thumbnail:
+      'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://www.youtube.com/watch?v=E7wJTI-1dvQ',
+  },
+]

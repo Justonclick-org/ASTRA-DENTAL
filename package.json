@@ -1,0 +1,29 @@
+{
+  "name": "astra-clinic",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://Justonclick-org.github.io/ASTRA-DENTAL",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^12.23.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.30.1",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "gh-pages": "^6.3.0",
+    "vite": "^5.4.19"
+  }
+}
