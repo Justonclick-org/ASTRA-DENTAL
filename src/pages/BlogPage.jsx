@@ -6,69 +6,65 @@
  * Contact: justonclick@2026
  */
 
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import SEOComponent from '../components/SEOComponent'
+import PageBanner from '../components/PageBanner'
 import SectionTitle from '../components/SectionTitle'
 import CTASection from '../components/CTASection'
 import { blogPosts, featuredBlog } from '../data/blogData'
 import { fadeUp, staggerContainer } from '../animations/motionVariants'
 
+const bannerImg = 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1920&q=80'
+
 function BlogPage() {
   return (
     <>
       <SEOComponent
-        title="Dental Blog | Astra Dental Clinic"
-        description="Read oral health articles on root canal signs, implant benefits, braces vs aligners, child dental care and whitening facts."
+        title="Dental Health Blog | Dr. Amit Pawar | Astra Dental Clinic Chembur"
+        description="Expert dental health articles by Dr. Amit Pawar, MDS — root canal signs, implant benefits, braces vs aligners, child dental care and teeth whitening facts. Astra Dental Clinic, Chembur Mumbai."
+        keywords="dental blog Chembur, oral health tips Mumbai, Dr Amit Pawar dental articles, dental implant guide Mumbai, root canal information, braces vs aligners India"
         path="/blog"
       />
+
+      <PageBanner
+        eyebrow="Blog"
+        title="Dental Health"
+        accentTitle="Articles"
+        description="Evidence-based articles to help you understand your treatment options and make confident decisions."
+        bgImage={bannerImg}
+      />
+
       <section className="container inner-page">
         <SectionTitle
-          eyebrow="Blog"
-          title="Patient Education Articles"
-          description="Clear, practical, and clinically useful articles designed to build trust and improve oral health awareness."
+          eyebrow="Latest"
+          title="Patient Education"
+          accentTitle="Content"
+          description="Clear, practical and clinically useful articles designed to build trust and improve oral health awareness."
         />
 
-        <div className="blog-feature-grid">
-          <motion.article
-            className="blog-feature-card"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <img src={featuredBlog.image} alt={featuredBlog.title} loading="lazy" />
-            <div className="blog-feature-content">
-              <p className="eyebrow">Featured Article</p>
-              <h2>{featuredBlog.title}</h2>
-              <p>{featuredBlog.excerpt}</p>
-              <div className="blog-meta">
-                <span>{featuredBlog.author}</span>
-                <span>{featuredBlog.readTime}</span>
-              </div>
+        {/* Featured article */}
+        <motion.article
+          className="blog-feature-card"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          style={{ marginBottom: 48 }}
+        >
+          <img src={featuredBlog.image} alt={featuredBlog.title} loading="lazy" />
+          <div className="blog-feature-content">
+            <p className="eyebrow">Featured Article</p>
+            <h2>{featuredBlog.title}</h2>
+            <p>{featuredBlog.excerpt}</p>
+            <div className="blog-meta">
+              <span>{featuredBlog.author}</span>
+              <span>{featuredBlog.readTime}</span>
             </div>
-          </motion.article>
+          </div>
+        </motion.article>
 
-          <motion.aside
-            className="blog-sidebar card simple-card"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <p className="eyebrow">Topics</p>
-            <ul className="blog-topic-list">
-              <li>Preventive Care</li>
-              <li>Implants</li>
-              <li>Root Canal</li>
-              <li>Orthodontics</li>
-              <li>Cosmetic Dentistry</li>
-            </ul>
-            <p className="muted-text">
-              Education-first content helps patients understand treatment choices before they book.
-            </p>
-          </motion.aside>
-        </div>
-
+        {/* Blog grid */}
         <motion.div
           className="blog-grid"
           variants={staggerContainer}
@@ -76,26 +72,31 @@ function BlogPage() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {blogPosts.map((post, index) => (
-            <motion.article
-              className={`blog-card ${index === 0 ? 'blog-card-accent' : ''}`}
-              key={post.slug}
-              variants={fadeUp}
-            >
-              <div className="blog-card-top">
-                <p className="eyebrow">{post.category}</p>
-                <small>{post.date}</small>
+          {blogPosts.map((post) => (
+            <motion.article className="blog-card" key={post.slug} variants={fadeUp}>
+              <div className="blog-card-img">
+                <img src={post.image} alt={post.title} loading="lazy" />
               </div>
-              <h3>{post.title}</h3>
-              <p>{post.excerpt}</p>
-              <button type="button" className="text-link">
-                Read Article
-              </button>
+              <div className="blog-card-body">
+                <div className="blog-card-top">
+                  <span className="blog-category-chip">{post.category}</span>
+                  <span className="blog-date">{post.date}</span>
+                </div>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <Link to={`/blog/${post.slug}`} className="text-link">
+                  Read Article →
+                </Link>
+              </div>
             </motion.article>
           ))}
         </motion.div>
       </section>
-      <CTASection title="Start with trusted dental education" description="Use the blog to guide patients toward the right treatment journey and increase appointment confidence." />
+
+      <CTASection
+        title="Start with trusted dental education"
+        description="Use the blog to guide patients toward the right treatment journey and increase appointment confidence."
+      />
     </>
   )
 }

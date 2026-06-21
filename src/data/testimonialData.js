@@ -11,28 +11,43 @@ export const testimonials = [
     name: 'Neha Sharma',
     treatment: 'Smile Makeover',
     rating: 5,
-    quote: 'The smile planning process was very transparent. I finally feel confident in every photograph.',
-    videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    quote: 'Dr. Pawar showed me a digital preview of my smile before any treatment began. The final result exceeded every expectation — I finally feel confident in every photograph. The clinic is clean, modern and the team genuinely cares.',
   },
   {
     name: 'Amit Verma',
     treatment: 'Dental Implant',
     rating: 5,
-    quote: 'Implant surgery was painless and the final crown feels exactly like my natural tooth.',
-    videoUrl: 'https://www.youtube.com/watch?v=ysz5S6PUM-U',
+    quote: 'I was nervous about implant surgery but Dr. Pawar made me completely at ease. The procedure was painless and the final crown feels and looks exactly like my natural tooth. Best decision I ever made for my smile.',
   },
   {
     name: 'Saira Khan',
-    treatment: 'Root Canal',
+    treatment: 'Root Canal Treatment',
     rating: 5,
-    quote: 'I walked in with severe pain and walked out relieved. The team was kind and reassuring.',
-    videoUrl: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ',
+    quote: 'I walked in with severe tooth pain and walked out completely relieved. Dr. Pawar was kind, explained every step, and I barely felt anything. I was so scared of root canal but this experience changed my view completely.',
+  },
+  {
+    name: 'Priya Nair',
+    treatment: 'Teeth Whitening',
+    rating: 5,
+    quote: 'My teeth went up several shades in just one session at Astra Dental. The clinic is spotless, modern and the staff is so welcoming. I wish I had done this years ago — so worth it for the confidence boost!',
+  },
+  {
+    name: 'Rajesh Patil',
+    treatment: 'Braces',
+    rating: 5,
+    quote: 'I had been putting off braces for years. The team at Astra Dental made the entire process smooth from consultation to completion. My bite is perfect now and my smile has completely transformed. Very professional.',
+  },
+  {
+    name: 'Kavya Deshpande',
+    treatment: 'Pediatric Dentistry',
+    rating: 5,
+    quote: 'My 5-year-old used to cry at the mention of the dentist. After two visits to Astra Dental Clinic, she actually looks forward to going. Dr. Pawar and the team are incredibly gentle with children. A blessing for parents.',
   },
 ]
 
 export const googleReviews = {
   rating: 4.9,
-  totalReviews: 864,
+  totalReviews: 500,
   summary:
-    'Rated highly for painless treatment, transparent consultation, and friendly doctors.',
+    'Consistently rated for painless treatment, transparent consultations, a child-friendly environment, and Dr. Amit Pawar\'s caring approach to every patient.',
 }

@@ -7,45 +7,45 @@
  */
 
 import SEOComponent from '../components/SEOComponent'
+import PageBanner from '../components/PageBanner'
 import SectionTitle from '../components/SectionTitle'
 import AppointmentForm from '../components/AppointmentForm'
+
+const bannerImg = 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1920&q=80'
 
 function AppointmentPage() {
   return (
     <>
       <SEOComponent
-        title="Book Appointment | Astra Dental Clinic"
-        description="Schedule your dental consultation with Astra Dental Clinic. Choose preferred date, time and treatment concern."
+        title="Book Dental Appointment in Chembur | Astra Dental Clinic | Dr. Amit Pawar"
+        description="Book a dental appointment with Dr. Amit Pawar at Astra Dental Clinic, Chembur Mumbai. Call +91 98605 32742 or fill the form for implants, root canal, braces, whitening and more."
+        keywords="book dentist appointment Chembur, dental appointment Mumbai, Dr Amit Pawar appointment, Astra Dental Clinic booking, dental consultation Chembur"
         path="/book-appointment"
       />
+
+      <PageBanner
+        eyebrow="Book Appointment"
+        title="Schedule Your"
+        accentTitle="Consultation"
+        description="Choose your preferred date, time and treatment concern — we'll confirm within 2 hours."
+        bgImage={bannerImg}
+      />
+
       <section className="container inner-page">
-        <SectionTitle eyebrow="Book Appointment" title="Book Your Consultation" />
+        <SectionTitle eyebrow="Appointment" title="Book Your" accentTitle="Visit" />
         <div className="grid grid-2">
           <AppointmentForm />
           <article className="card simple-card">
-            <p className="eyebrow">Appointment Management</p>
-            <h3>Static-only appointment options</h3>
-            <p>
-              Since you want a static deployment with no server, the form should connect to an
-              external form processor instead of a custom backend.
-            </p>
+            <p className="eyebrow">What Happens Next</p>
+            <h3>Your Appointment Journey</h3>
             <ul>
-              <li>
-                <strong>Fastest option:</strong> Netlify Forms or Formspree for email notification
-                on every submission.
-              </li>
-              <li>
-                <strong>Best record-keeping:</strong> send entries to Google Sheets, Airtable, or
-                Supabase using an automation layer like Zapier or Make.
-              </li>
-              <li>
-                <strong>Best clinic workflow:</strong> trigger email plus WhatsApp alerts to the
-                receptionist and store the lead in a shared dashboard.
-              </li>
+              <li>Fill the form and submit your preferred date and concern</li>
+              <li>Our team confirms your slot within 2 hours via call or WhatsApp</li>
+              <li>Arrive 10 minutes early for your first consultation</li>
+              <li>Leave with a clear treatment plan and transparent pricing</li>
             </ul>
-            <p>
-              I can wire this project to Netlify Forms or Formspree next, which keeps the site
-              static while still capturing records and sending notifications.
+            <p className="muted-text" style={{ marginTop: 16 }}>
+              For same-day or emergency appointments, call us directly at +91 99999 00111.
             </p>
           </article>
         </div>

@@ -10,11 +10,14 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { motion } from 'framer-motion'
 import SEOComponent from '../components/SEOComponent'
+import PageBanner from '../components/PageBanner'
 import SectionTitle from '../components/SectionTitle'
 import GalleryGrid from '../components/GalleryGrid'
 import CTASection from '../components/CTASection'
 import { galleryItems, beforeAfterCases } from '../data/galleryData'
 import { slideLeft, slideRight, staggerContainer } from '../animations/motionVariants'
+
+const bannerImg = 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1920&q=80'
 
 function GalleryPage() {
   return (
@@ -24,10 +27,20 @@ function GalleryPage() {
         description="View smile makeovers, implants, whitening, orthodontics, clinic interiors and team moments at Astra Dental Clinic."
         path="/gallery"
       />
+
+      <PageBanner
+        eyebrow="Gallery"
+        title="Smile"
+        accentTitle="Transformations"
+        description="Before-and-after results, clinic interiors and patient journey moments."
+        bgImage={bannerImg}
+      />
+
       <section className="container inner-page">
         <SectionTitle
           eyebrow="Gallery"
-          title="Treatment Outcomes and Clinic Experience"
+          title="Treatment Outcomes &"
+          accentTitle="Clinic Experience"
           description="Realistic before-and-after storytelling helps patients understand the transformation journey before they book."
         />
 
@@ -65,7 +78,7 @@ function GalleryPage() {
         </motion.div>
 
         <section className="inner-page" style={{ paddingTop: '36px' }}>
-          <SectionTitle eyebrow="Before & After" title="Treatment Transformations" />
+          <SectionTitle eyebrow="Before & After" title="Treatment" accentTitle="Transformations" />
           <Swiper spaceBetween={18} slidesPerView={1.05} breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
             {beforeAfterCases.map((item) => (
               <SwiperSlide key={item.title}>
@@ -92,10 +105,11 @@ function GalleryPage() {
         </section>
 
         <section className="inner-page" style={{ paddingTop: '30px' }}>
-          <SectionTitle eyebrow="Clinic Gallery" title="Interior, Equipment and Team" />
+          <SectionTitle eyebrow="Clinic Gallery" title="Interior, Equipment" accentTitle="and Team" />
           <GalleryGrid items={galleryItems} />
         </section>
       </section>
+
       <CTASection title="See your own transformation next" description="Book a consultation and let us plan a smile story worth showing." />
     </>
   )

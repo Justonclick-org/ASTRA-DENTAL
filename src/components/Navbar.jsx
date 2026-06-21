@@ -19,23 +19,24 @@ const navItems = [
   { label: 'Videos', path: '/video-library' },
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Blog', path: '/blog' },
-  { label: 'Pricing', path: '/pricing' },
   { label: 'Contact', path: '/contact' },
 ]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [sticky, setSticky] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setSticky(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const isTransparent = !scrolled
+
   return (
-    <header className={`site-header ${sticky ? 'sticky' : ''}`}>
-      <div className="emergency-bar">Emergency Consultation: +91 99999 00111</div>
+    <header className={`site-header${isTransparent ? '' : ' sticky'}`}>
+      <div className="emergency-bar">Emergency Consultation: +91 98605 32742</div>
       <div className="container nav-wrap">
         <Link to="/" className="logo">
           ASTRA DENTAL

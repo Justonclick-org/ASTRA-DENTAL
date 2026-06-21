@@ -12,81 +12,104 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import Button from './Button'
-import { fadeUp, staggerContainer } from '../animations/motionVariants'
+import { fadeUp, staggerContainer, staggerFast, scalePop, slideRight } from '../animations/motionVariants'
 
 function Hero({ data, slides = [] }) {
   return (
-    <section className="hero-section">
-      <div className="container hero-grid">
-        <motion.div
-          className="hero-copy"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <motion.p className="eyebrow" variants={fadeUp}>
-            Premium Dental Care
-          </motion.p>
-          <motion.h1 variants={fadeUp}>{data.title}</motion.h1>
-          <motion.p variants={fadeUp} className="hero-subtitle">
-            {data.subtitle}
-          </motion.p>
-          <motion.p variants={fadeUp} className="hero-trust">
-            Chembur, Mumbai • Family, cosmetic, implant, and smile care
-          </motion.p>
-          <motion.div className="hero-badges" variants={fadeUp}>
-            <span>Advanced Technology</span>
-            <span>Pain-Free Dentistry</span>
-            <span>Same-Day Consultations</span>
-          </motion.div>
-          <motion.div variants={fadeUp} className="hero-actions">
-            <Button to="/book-appointment">Book Appointment</Button>
-            <Button href="tel:+919876543210" variant="ghost">
-              Call Now
-            </Button>
-          </motion.div>
-        </motion.div>
+    <>
+      {/* ── Full-bleed Hero ── */}
+      <section className="hero-section">
 
-        <motion.div
-          className="hero-visual"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        {/* Background carousel */}
+        <div className="hero-bg-slider">
           <Swiper
             modules={[Autoplay, Pagination]}
-            autoplay={{ delay: 3200, disableOnInteraction: false }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             loop
             spaceBetween={0}
+            className="hero-bg-swiper"
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.title}>
-                <article className="hero-card hero-slide-card">
-                  <img src={slide.image} alt={slide.title} className="hero-slide-image" loading="eager" />
-                  <div className="hero-slide-overlay">
-                    <p className="eyebrow">Clinic Experience</p>
-                    <h3>{slide.title}</h3>
-                    <p>{slide.caption}</p>
-                  </div>
-                </article>
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="hero-bg-img"
+                  loading="eager"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="hero-overlay" />
+        </div>
 
-          <div className="hero-metrics hero-card">
-            {data.stats.map((item) => (
-              <div className="metric" key={item.label}>
-                <h3>{item.value}</h3>
-                <p>{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
+        {/* Foreground content */}
+        <div className="container">
+          <motion.div
+            className="hero-content"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* Rating badge */}
+            <motion.div className="hero-rating-badge" variants={slideRight}>
+              <span className="stars">★★★★★</span>
+              <span>4.9 · 500+ Google Reviews</span>
+            </motion.div>
+
+            {/* Eyebrow */}
+            <motion.p className="eyebrow hero-eyebrow" variants={fadeUp}>
+              Premium Dental Care · Chembur, Mumbai
+            </motion.p>
+
+            {/* Headline with italic gold accent */}
+            <motion.h1 variants={fadeUp}>
+              Advanced Dental Care For Healthy,{' '}
+              <em>Confident Smiles.</em>
+            </motion.h1>
+
+            {/* Subtitle */}
+            <motion.p className="hero-subtitle" variants={fadeUp}>
+              {data.subtitle}
+            </motion.p>
+
+            {/* Badges */}
+            <motion.div className="hero-badges" variants={staggerFast}>
+              {['Advanced Technology', 'Pain-Free Dentistry', 'Same-Day Consultations'].map((badge) => (
+                <motion.span key={badge} variants={scalePop}>
+                  {badge}
+                </motion.span>
+              ))}
+            </motion.div>
+
+            {/* CTAs */}
+            <motion.div className="hero-actions" variants={fadeUp}>
+              <Button to="/book-appointment">Book Appointment</Button>
+              <Button href="tel:+919860532742" variant="ghost">
+                Call Now →
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Stats Strip ── */}
+      <motion.div
+        className="hero-stats-strip"
+        variants={staggerFast}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        {data.stats.map((stat) => (
+          <motion.div className="hero-stat" key={stat.label} variants={fadeUp}>
+            <span className="hero-stat-value">{stat.value}</span>
+            <span className="hero-stat-label">{stat.label}</span>
+          </motion.div>
+        ))}
+      </motion.div>
+    </>
   )
 }
 

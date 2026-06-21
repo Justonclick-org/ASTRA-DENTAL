@@ -6,37 +6,74 @@
  * Contact: justonclick@2026
  */
 
+import { motion } from 'framer-motion'
 import SEOComponent from '../components/SEOComponent'
+import PageBanner from '../components/PageBanner'
 import SectionTitle from '../components/SectionTitle'
+import DoctorCard from '../components/DoctorCard'
+import CTASection from '../components/CTASection'
 import { doctors } from '../data/doctorData'
+import { fadeUp, staggerContainer } from '../animations/motionVariants'
+
+const bannerImg = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80'
 
 function TeamPage() {
   return (
     <>
       <SEOComponent
-        title="Our Team | Astra Dental Clinic Specialists"
-        description="Meet Astra Dental Clinic specialists with expertise in implants, root canal, orthodontics, cosmetic dentistry and pediatric care."
+        title="Dr. Amit Pawar & Team | Astra Dental Clinic Chembur"
+        description="Meet Dr. Amit Pawar (BDS, MDS) and the specialist dental team at Astra Dental Clinic, Chembur Mumbai — expertise in implants, endodontics, orthodontics and cosmetic dentistry."
+        keywords="Dr Amit Pawar MDS Chembur, dental team Chembur Mumbai, dentist Chembur, implant specialist Mumbai, orthodontist Chembur, endodontist Chembur"
         path="/our-team"
       />
+
+      <PageBanner
+        eyebrow="Our Experts"
+        title="Meet Our"
+        accentTitle="Specialists"
+        description="A dedicated team of experienced dental professionals committed to your long-term oral health."
+        bgImage={bannerImg}
+      />
+
       <section className="container inner-page">
-        <SectionTitle eyebrow="Our Team" title="Experienced Specialists" />
-        <div className="team-grid">
+        <SectionTitle
+          eyebrow="Our Team"
+          title="Expert"
+          accentTitle="Dental Professionals"
+          description="Each specialist brings advanced training, professional memberships, and a genuine commitment to patient-first care."
+        />
+        <motion.div
+          className="doctor-grid"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {doctors.map((doctor) => (
-            <article className="card team-card" key={doctor.id}>
-              <img src={doctor.image} alt={doctor.name} loading="lazy" />
-              <div className="card-body">
-                <h3>{doctor.name}</h3>
-                <p>{doctor.qualification}</p>
-                <p>{doctor.experience}</p>
-                <p>{doctor.specialization}</p>
-                <p>Memberships: {doctor.memberships.join(', ')}</p>
-                <p>Languages: {doctor.languages.join(', ')}</p>
-                <p>{doctor.bio}</p>
-              </div>
-            </article>
+            <motion.div key={doctor.id} variants={fadeUp}>
+              <DoctorCard doctor={doctor} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      <section className="team-values-strip">
+        <div className="container team-values-inner">
+          {[
+            { stat: '40+', label: 'Years Combined Experience' },
+            { stat: '5000+', label: 'Patients Treated' },
+            { stat: '3', label: 'Specialist Dentists' },
+            { stat: '98%', label: 'Patient Satisfaction' },
+          ].map((item) => (
+            <div className="team-value-item" key={item.label}>
+              <strong>{item.stat}</strong>
+              <span>{item.label}</span>
+            </div>
           ))}
         </div>
       </section>
+
+      <CTASection />
     </>
   )
 }

@@ -6,10 +6,16 @@
  * Contact: justonclick@2026
  */
 
+import { motion } from 'framer-motion'
 import SEOComponent from '../components/SEOComponent'
+import PageBanner from '../components/PageBanner'
 import SectionTitle from '../components/SectionTitle'
 import VideoCard from '../components/VideoCard'
+import CTASection from '../components/CTASection'
 import { videos } from '../data/videoData'
+import { fadeUp, staggerContainer } from '../animations/motionVariants'
+
+const bannerImg = 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80'
 
 function VideoLibraryPage() {
   return (
@@ -19,14 +25,33 @@ function VideoLibraryPage() {
         description="Watch patient education videos, doctor insights, clinic tour and oral health tips from Astra Dental Clinic."
         path="/video-library"
       />
+
+      <PageBanner
+        eyebrow="Video Library"
+        title="Patient Education"
+        accentTitle="& Insights"
+        description="Watch clinic tours, treatment explanations and real patient stories."
+        bgImage={bannerImg}
+      />
+
       <section className="container inner-page">
-        <SectionTitle eyebrow="Video Library" title="Patient Education and Insights" />
-        <div className="grid grid-3">
+        <SectionTitle eyebrow="Videos" title="Watch &" accentTitle="Learn" />
+        <motion.div
+          className="grid grid-3"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {videos.map((video) => (
-            <VideoCard key={video.title} video={video} />
+            <motion.div key={video.title} variants={fadeUp}>
+              <VideoCard video={video} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
+
+      <CTASection />
     </>
   )
 }

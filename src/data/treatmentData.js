@@ -10,99 +10,211 @@ export const treatments = [
   {
     slug: 'dental-implants',
     title: 'Dental Implants',
-    shortDescription: 'Permanent replacement for missing teeth with natural look and bite strength.',
-    whatIs: 'Dental implants are titanium roots placed in jawbone to support crowns or bridges.',
-    benefits: ['Natural appearance', 'Preserves jawbone', 'Long-term stability'],
-    whoNeedsIt: 'Adults with missing teeth and adequate bone support, or those willing for grafting when needed.',
-    procedure: 'Consultation, CBCT planning, implant placement, healing phase, and final prosthetic restoration.',
-    recovery: 'Most patients return to routine within 24-48 hours; full osseointegration takes a few months.',
+    shortDescription: 'Permanent replacement for missing teeth with natural look, feel, and bite strength.',
+    highlights: [
+      { stat: '60–90 min', label: 'Procedure Time' },
+      { stat: '1–3', label: 'Sessions' },
+      { stat: '24–48 hrs', label: 'Recovery' },
+    ],
+    whatIs:
+      'Dental implants are small titanium posts surgically placed into the jawbone to act as artificial tooth roots. Once integrated with the bone — a process called osseointegration — they provide a stable foundation for a crown, bridge, or denture. Unlike traditional dentures, implants do not slip, click, or require removal at night, giving you the confidence of natural teeth in both appearance and function.',
+    benefits: [
+      'Looks and feels like a natural tooth',
+      'Prevents jawbone loss after extraction',
+      'Long-term durability — often lasts a lifetime',
+      'No impact on adjacent healthy teeth',
+      'Restored confidence in eating and speaking',
+    ],
+    whoNeedsIt:
+      'Adults with one or more missing teeth who have sufficient jawbone density, or those willing to undergo bone grafting when required. Non-smokers and patients with well-controlled systemic health are the best candidates.',
+    procedure:
+      'Treatment begins with a CBCT scan and detailed 3D planning. The implant is placed under local anesthesia, followed by a healing period of 8–16 weeks for osseointegration. A custom crown or bridge is then attached to the implant abutment, completing your new smile.',
+    recovery:
+      'Most patients resume normal routine within 24–48 hours. Mild swelling and tenderness are expected for the first few days and are managed with prescribed medication. Full bone integration takes a few months, during which a temporary restoration maintains aesthetics.',
     faqs: [
-      { question: 'Is implant surgery painful?', answer: 'It is done under local anesthesia and generally well tolerated.' },
-      { question: 'How long does the process take?', answer: 'Single implant cases are often completed in 8-16 weeks depending on healing.' },
+      { question: 'Is implant surgery painful?', answer: 'The procedure is performed under local anesthesia and is generally well-tolerated. Post-operative discomfort is mild and controlled with routine pain management.' },
+      { question: 'How long does the full process take?', answer: 'Single implant cases are typically completed in 8–16 weeks depending on healing. Cases requiring bone grafting may take a few months longer.' },
+      { question: 'Can anyone get dental implants?', answer: 'Most healthy adults are candidates. Your dentist will evaluate bone volume, gum health, and medical history to confirm suitability before treatment.' },
     ],
   },
   {
     slug: 'root-canal-treatment',
     title: 'Root Canal Treatment',
-    shortDescription: 'Save infected teeth with precision endodontic care.',
-    whatIs: 'A procedure to remove infected pulp, disinfect canals and seal the tooth to stop pain and infection.',
-    benefits: ['Pain relief', 'Saves natural tooth', 'Prevents extraction'],
-    whoNeedsIt: 'Patients with deep decay, prolonged tooth pain, swelling, or sensitivity due to pulp infection.',
-    procedure: 'Diagnosis, anesthesia, canal cleaning, shaping, filling and crown recommendation.',
-    recovery: 'Mild tenderness for 24-72 hours is common and controlled by medication.',
+    shortDescription: 'Save an infected or badly damaged tooth with painless, precision endodontic care.',
+    highlights: [
+      { stat: '45–90 min', label: 'Per Session' },
+      { stat: '1–3', label: 'Sessions' },
+      { stat: '24–72 hrs', label: 'Recovery' },
+    ],
+    whatIs:
+      'Root canal treatment (RCT) is an endodontic procedure to remove infected or inflamed pulp tissue from inside the tooth. The canals are cleaned, shaped, and sealed to eliminate bacteria and prevent reinfection. A crown is usually placed afterward to restore full strength and function to the treated tooth — allowing you to keep your natural tooth for years to come.',
+    benefits: [
+      'Eliminates tooth pain and infection',
+      'Saves the natural tooth from extraction',
+      'Restores normal biting and chewing',
+      'Prevents infection from spreading',
+      'Long-lasting results with a proper crown',
+    ],
+    whoNeedsIt:
+      'Patients experiencing deep decay reaching the pulp, severe toothache, prolonged sensitivity to hot or cold, swelling around the tooth, or a dental abscess. If X-rays reveal pulp involvement, root canal is the treatment of choice.',
+    procedure:
+      'Following a detailed diagnosis and X-rays, local anesthesia is administered. The pulp chamber is opened, infected tissue is removed, canals are shaped and irrigated with antiseptic solution, and then filled with biocompatible gutta-percha material. A post and crown are placed to restore full function.',
+    recovery:
+      'Mild soreness for 24–72 hours is common and easily managed with over-the-counter pain relief. Most patients return to work or daily routine the same day. Avoid chewing on the treated side until the final crown is placed.',
     faqs: [
-      { question: 'Will I need a crown?', answer: 'In most cases yes, especially for back teeth for strength.' },
-      { question: 'Can treatment be done in one sitting?', answer: 'Simple cases may be single visit; complex cases need 2 or more visits.' },
+      { question: 'Will I need a crown after treatment?', answer: 'Yes, in most cases — especially for back teeth. A crown protects the treated tooth from fracture and restores its full shape and strength.' },
+      { question: 'Can treatment be completed in one sitting?', answer: 'Simple, single-canal cases can often be completed in one visit. Multi-canal or infected teeth with abscess may require 2–3 appointments.' },
+      { question: 'Is the procedure painful?', answer: 'Modern RCT is performed under effective local anesthesia and is no more uncomfortable than a routine filling. Most patients are surprised by how comfortable the experience is.' },
     ],
   },
   {
     slug: 'braces-aligners',
     title: 'Braces & Aligners',
-    shortDescription: 'Correct crowded, spaced or misaligned teeth with modern orthodontics.',
-    whatIs: 'Orthodontic treatment that uses braces or clear aligners to gradually move teeth into ideal alignment.',
-    benefits: ['Improved smile aesthetics', 'Better bite function', 'Easier oral hygiene'],
-    whoNeedsIt: 'Teens and adults with spacing, crowding, bite issues, or relapse after old orthodontic treatment.',
-    procedure: 'Records and scans, treatment simulation, appliance placement and periodic monitoring.',
-    recovery: 'Temporary pressure after adjustments is normal and settles quickly.',
+    shortDescription: 'Correct crowded, spaced, or misaligned teeth with modern orthodontic solutions.',
+    highlights: [
+      { stat: '6–24 mo', label: 'Treatment Duration' },
+      { stat: 'Monthly', label: 'Review Visits' },
+      { stat: 'Minimal', label: 'Downtime' },
+    ],
+    whatIs:
+      'Orthodontic treatment uses gentle, consistent forces to move teeth gradually into their ideal positions. At Astra Dental we offer traditional metal braces, ceramic tooth-colored braces, and clear aligner systems. Whether correcting a crowded arch, closing unwanted gaps, or improving bite function, orthodontic treatment delivers long-lasting results that improve both aesthetics and oral health.',
+    benefits: [
+      'Straighter smile and improved facial aesthetics',
+      'Better bite function and jaw alignment',
+      'Easier to clean — fewer cavities and gum issues',
+      'Clear aligners: nearly invisible while wearing',
+      'Lasting results with proper retention',
+    ],
+    whoNeedsIt:
+      'Children, teenagers, and adults with crowding, spacing, protrusion, crossbite, overbite, underbite, or relapse from previous orthodontic treatment. Early intervention in children can simplify future treatment.',
+    procedure:
+      'Treatment begins with digital scans, photographs, and a simulation of your expected result. Braces or aligners are then fitted. Adjustment appointments every 4–8 weeks allow the dentist to monitor progress and make refinements. After active treatment, retainers maintain your new smile.',
+    recovery:
+      'A short period of pressure or mild discomfort follows each adjustment — this typically resolves within 48–72 hours. Clear aligner wearers experience minimal sensitivity. Speech adapts quickly in the first week.',
     faqs: [
-      { question: 'How long will treatment take?', answer: 'Usually 6-24 months depending on complexity.' },
-      { question: 'Are aligners removable?', answer: 'Yes, they are removed for meals and brushing.' },
+      { question: 'How long will orthodontic treatment take?', answer: 'Typically 6–24 months depending on the severity of misalignment and compliance with wearing aligners or attending appointments.' },
+      { question: 'Are aligners truly removable?', answer: 'Yes — aligners are removed for eating, drinking (anything other than water), and brushing. They must be worn 20–22 hours per day for best results.' },
+      { question: 'Do braces or aligners hurt?', answer: 'Initial placement and adjustments cause temporary pressure. Over-the-counter pain relief and soft foods during the first few days are usually sufficient.' },
     ],
   },
   {
     slug: 'teeth-whitening',
     title: 'Teeth Whitening',
-    shortDescription: 'Professional stain removal for a brighter smile.',
-    whatIs: 'A cosmetic treatment that lightens tooth shade using safe dental-grade whitening agents.',
-    benefits: ['Quick results', 'Safe supervised process', 'Boosted confidence'],
-    whoNeedsIt: 'People with yellowing, staining, or dull tooth shade who want a brighter smile.',
-    procedure: 'Shade assessment, gum protection, whitening gel activation and post-care instructions.',
-    recovery: 'Short-lived sensitivity may occur and resolves in a few days.',
+    shortDescription: 'Professional stain removal and brightening for a confident, radiant smile.',
+    highlights: [
+      { stat: '60–90 min', label: 'In-chair Session' },
+      { stat: '1', label: 'Visit' },
+      { stat: '2–3 Days', label: 'Sensitivity Settles' },
+    ],
+    whatIs:
+      'Professional teeth whitening uses dental-grade peroxide-based whitening agents to break down surface and sub-surface tooth stains, lightening your natural tooth shade by several tones. Unlike over-the-counter whitening products, in-chair treatment is performed under clinical supervision — ensuring safety, even results, and maximum effectiveness in a single visit.',
+    benefits: [
+      'Visible brightening in a single session',
+      'Safe, clinician-supervised protocol',
+      'Removes coffee, tea, and tobacco stains',
+      'Boosted confidence and a more youthful smile',
+      'Take-home trays available for maintenance',
+    ],
+    whoNeedsIt:
+      'Adults with yellowing, staining, or dull tooth shade from food, drinks, aging, or medication. Ideal for those preparing for special events such as weddings, interviews, or photographs. Best suited for natural teeth without crowns or veneers.',
+    procedure:
+      'Shade mapping is performed first to document your starting shade. Gums and lips are carefully protected with a barrier. Whitening gel is applied to the teeth and activated according to your desired shade. Post-treatment instructions and a shade card are provided.',
+    recovery:
+      'Mild tooth sensitivity is normal for 24–72 hours after treatment and resolves completely. Avoid strongly colored foods and drinks for 24–48 hours to maximize results. Custom take-home trays can be used periodically to maintain whiteness.',
     faqs: [
-      { question: 'Is whitening permanent?', answer: 'Results are long lasting with maintenance and reduced staining foods.' },
-      { question: 'Does it damage enamel?', answer: 'No, when done by a dentist with approved protocols.' },
+      { question: 'Are whitening results permanent?', answer: 'Results are long-lasting with good maintenance habits and reduced staining foods. Periodic top-ups with take-home trays keep your smile bright.' },
+      { question: 'Does whitening damage my enamel?', answer: 'No — when performed by a qualified dentist using clinically approved protocols. The whitening agent does not erode enamel.' },
+      { question: 'Will crowns or veneers also whiten?', answer: 'Whitening agents only work on natural tooth structure. Crowns, veneers, and bonding will remain their original shade, which is discussed during shade planning.' },
     ],
   },
   {
     slug: 'smile-makeover',
     title: 'Smile Makeover',
-    shortDescription: 'Comprehensive aesthetic planning for your best smile.',
-    whatIs: 'A personalized combination of cosmetic and restorative treatments to improve smile harmony.',
-    benefits: ['Custom smile design', 'Balanced facial aesthetics', 'Improved confidence'],
-    whoNeedsIt: 'Patients with chipped, discolored, uneven or worn teeth wanting complete smile enhancement.',
-    procedure: 'Digital smile design, trial preview, phased treatment and final refinements.',
-    recovery: 'Depends on included procedures; most are minimally invasive with quick recovery.',
+    shortDescription: 'Comprehensive aesthetic planning to craft your most confident, balanced smile.',
+    highlights: [
+      { stat: 'Custom', label: 'Digital Design' },
+      { stat: 'Phased', label: 'Treatment' },
+      { stat: 'Instant', label: 'Preview Available' },
+    ],
+    whatIs:
+      'A smile makeover is a personalized, multi-step treatment plan that combines two or more cosmetic and restorative procedures to transform the overall appearance of your smile. Using digital smile design technology, we simulate your outcome before any treatment begins — allowing you to visualize and approve your new smile in advance. Common combinations include whitening, veneers, bonding, crowns, and gum recontouring.',
+    benefits: [
+      'Fully customized to your facial features',
+      'Preview results before committing to treatment',
+      'Combines multiple procedures for a complete transformation',
+      'Minimally invasive options available',
+      'Lasting, natural-looking enhancement',
+    ],
+    whoNeedsIt:
+      'Patients with multiple cosmetic concerns — including chipped, worn, discolored, uneven, or gapped teeth — who want a comprehensive upgrade rather than a single isolated treatment. Ideal for those planning a significant life event or seeking a confidence-changing transformation.',
+    procedure:
+      'A thorough consultation includes photographs, digital smile design simulation, and a wax mock-up or trial smile on teeth. Once approved, treatment is phased in the optimal sequence — usually starting with any necessary restorations, then cosmetic refinements, followed by final polishing and review.',
+    recovery:
+      'Recovery depends on the specific procedures included. Cosmetic bonding and whitening have minimal downtime. Veneers and crowns may cause temporary sensitivity. Your dentist will outline a recovery timeline specific to your treatment plan.',
     faqs: [
-      { question: 'Can I preview results?', answer: 'Yes, digital planning and mock-ups are used whenever possible.' },
-      { question: 'How long does a makeover take?', answer: 'Ranges from a few sessions to multiple weeks depending on treatment scope.' },
+      { question: 'Can I see results before treatment?', answer: 'Yes — digital smile design and physical mock-ups are used to show you a preview. You can request adjustments before any irreversible work begins.' },
+      { question: 'How long does a full makeover take?', answer: 'Depending on the procedures involved, a makeover ranges from 2 sessions to several weeks. Your dentist will map out a realistic timeline at consultation.' },
+      { question: 'Is a smile makeover expensive?', answer: 'Cost varies with the number of procedures. A detailed treatment plan with transparent pricing is provided at consultation. Finance options are available.' },
     ],
   },
   {
     slug: 'pediatric-dentistry',
     title: 'Pediatric Dentistry',
-    shortDescription: 'Gentle and preventive dental care for children.',
-    whatIs: 'Specialized dental care focused on children from infancy through adolescence.',
-    benefits: ['Child-friendly approach', 'Early prevention', 'Habit guidance for parents'],
-    whoNeedsIt: 'Children requiring checkups, cavity care, fluoride treatment, sealants or growth monitoring.',
-    procedure: 'Oral exam, preventive cleaning, behavior guidance and treatment when needed.',
-    recovery: 'Most preventive visits have no downtime and children return to routine immediately.',
+    shortDescription: 'Gentle, fun, and preventive dental care designed especially for children.',
+    highlights: [
+      { stat: 'Age 1+', label: 'First Visit' },
+      { stat: 'Child-First', label: 'Approach' },
+      { stat: 'Zero', label: 'Downtime' },
+    ],
+    whatIs:
+      'Pediatric dentistry focuses on the oral health of children from their very first tooth through the teenage years. At Astra Dental, we have created a welcoming, anxiety-free environment where children feel comfortable and safe. We combine preventive care with education for parents and gentle treatment when needed — building positive dental habits that last a lifetime.',
+    benefits: [
+      'Child-friendly, anxiety-free clinic atmosphere',
+      'Prevents cavities early with fluoride and sealants',
+      'Growth monitoring for jaw and bite development',
+      'Parent education on diet, brushing, and habits',
+      'Builds positive dental attitudes for life',
+    ],
+    whoNeedsIt:
+      'All children from infancy through adolescence, particularly those due for their first dental visit, with existing cavities or tooth pain, requiring fluoride treatment or sealants, or needing guidance on habits like thumb sucking or pacifier use.',
+    procedure:
+      "A friendly oral examination is followed by professional cleaning appropriate for the child's age. Preventive treatments such as fluoride application or pit-and-fissure sealants are performed where recommended. Parents receive personalized guidance on home care, diet, and growth monitoring.",
+    recovery:
+      'Preventive visits have no recovery time. Children return to school and normal activities immediately. If a filling or minor procedure was performed, any mild sensitivity settles within a day.',
     faqs: [
-      { question: 'When should first dental visit happen?', answer: 'By first birthday or within 6 months of first tooth eruption.' },
-      { question: 'Are baby teeth important?', answer: 'Yes, they guide permanent teeth and support speech and nutrition.' },
+      { question: "When should my child's first dental visit happen?", answer: 'By their first birthday, or within 6 months of the first tooth appearing — whichever comes first. Early visits establish trust and detect problems early.' },
+      { question: 'Are baby teeth important if they fall out anyway?', answer: 'Absolutely. Primary teeth guide permanent teeth into position, support speech development, and enable proper nutrition. Losing them too early can cause alignment issues.' },
+      { question: 'My child is afraid of dentists — what do you do?', answer: 'Our pediatric approach includes a gentle introduction to the clinic, child-friendly language, and behavior guidance techniques to make every visit a positive experience.' },
     ],
   },
   {
     slug: 'cosmetic-dentistry',
     title: 'Cosmetic Dentistry',
-    shortDescription: 'Aesthetic treatments for smile refinement and confidence.',
-    whatIs: 'A branch of dentistry that enhances tooth color, shape, alignment and overall smile aesthetics.',
-    benefits: ['Natural-looking enhancements', 'Improved smile symmetry', 'Confidence boost'],
-    whoNeedsIt: 'Patients with minor cosmetic concerns including chips, discoloration, uneven edges, or gaps.',
-    procedure: 'Consultation, shade and shape planning, conservative correction and polishing.',
-    recovery: 'Minimal recovery in most procedures with immediate visible improvements.',
+    shortDescription: 'Aesthetic treatments for smile refinement, symmetry, and lasting confidence.',
+    highlights: [
+      { stat: 'Same-day', label: 'Options Available' },
+      { stat: 'Conservative', label: 'Approach' },
+      { stat: 'Natural', label: 'Looking Results' },
+    ],
+    whatIs:
+      'Cosmetic dentistry encompasses a range of aesthetic dental treatments that enhance the color, shape, size, alignment, and overall harmony of your smile. From tooth-colored composite bonding and porcelain veneers to gum contouring and smile recontouring, our cosmetic services are tailored to your unique facial features and smile goals — always with a conservative, preservation-first philosophy.',
+    benefits: [
+      'Natural-looking, customized enhancements',
+      'Improved smile symmetry and proportions',
+      'Minimal to no tooth reduction in many treatments',
+      'Corrects chips, cracks, gaps, and discoloration',
+      'Immediate confidence improvement',
+    ],
+    whoNeedsIt:
+      'Patients with minor to moderate cosmetic concerns — chips, cracks, mild crowding, discoloration, short teeth, uneven gum line, or unwanted gaps — who want conservative improvements without extensive orthodontic or restorative work.',
+    procedure:
+      'A cosmetic consultation includes a detailed smile analysis, photographs, and discussion of realistic outcomes. Treatment is planned using a conservative, tooth-preserving approach. Composite bonding is completed in a single visit, while veneers and gum recontouring require 2–3 appointments.',
+    recovery:
+      'Most cosmetic procedures involve minimal to no recovery time. Composite bonding has zero downtime. Veneers may cause brief sensitivity for a few days. Gum contouring heals fully within one to two weeks.',
     faqs: [
-      { question: 'Is cosmetic dentistry only for celebrities?', answer: 'No, treatments are tailored for everyday needs and budgets.' },
-      { question: 'Can cosmetic procedures be reversible?', answer: 'Some are reversible while others are long-term; your dentist will guide choices.' },
+      { question: 'Is cosmetic dentistry only for extreme cases?', answer: 'Not at all. Many patients seek simple improvements — a single chipped tooth, minor staining, or a small gap — that make a significant difference in daily confidence.' },
+      { question: 'Will cosmetic treatments look natural?', answer: 'Yes. We use shade-matched materials and artistic shaping techniques to ensure results look completely natural and complement your skin tone and facial features.' },
+      { question: 'Are cosmetic procedures reversible?', answer: 'Some procedures, like composite bonding, are reversible or adjustable. Veneers and gum contouring are more permanent. Your dentist will fully discuss implications before you decide.' },
     ],
   },
 ]

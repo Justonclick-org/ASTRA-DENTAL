@@ -20,6 +20,7 @@ const VideoLibraryPage = lazy(() => import('../pages/VideoLibraryPage'))
 const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'))
 const PricingPage = lazy(() => import('../pages/PricingPage'))
 const BlogPage = lazy(() => import('../pages/BlogPage'))
+const BlogDetailPage = lazy(() => import('../pages/BlogDetailPage'))
 const FaqPage = lazy(() => import('../pages/FaqPage'))
 const ContactPage = lazy(() => import('../pages/ContactPage'))
 const AppointmentPage = lazy(() => import('../pages/AppointmentPage'))
@@ -43,6 +44,7 @@ function AppRouter() {
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/book-appointment" element={<AppointmentPage />} />

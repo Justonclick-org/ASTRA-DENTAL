@@ -6,23 +6,33 @@
  * Contact: justonclick@2026
  */
 
+import { motion } from 'framer-motion'
 import Button from './Button'
+import { fadeUp, slideLeft, staggerContainer } from '../animations/motionVariants'
 
-function CTASection({ title = 'Book Your Consultation Today', description = 'Connect with our specialists for a personalized treatment plan.' }) {
+function CTASection({
+  title = 'Book Your Consultation Today',
+  description = 'Connect with our specialists for a personalized treatment plan.',
+}) {
   return (
-    <section className="cta-section container">
-      <div>
+    <motion.section
+      className="cta-section container"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.div variants={slideLeft}>
         <p className="eyebrow">Quick Appointment</p>
         <h2>{title}</h2>
         <p>{description}</p>
-      </div>
-      <div className="cta-actions">
+      </motion.div>
+
+      <motion.div className="cta-actions" variants={fadeUp}>
         <Button to="/book-appointment">Book Appointment</Button>
-        <Button to="/contact" variant="ghost">
-          Contact Clinic
-        </Button>
-      </div>
-    </section>
+        <Button to="/contact" variant="ghost">Contact Clinic</Button>
+      </motion.div>
+    </motion.section>
   )
 }
 

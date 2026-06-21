@@ -16,7 +16,7 @@ import './styles/global.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/ASTRA-DENTAL">
         <App />
       </BrowserRouter>
     </HelmetProvider>
