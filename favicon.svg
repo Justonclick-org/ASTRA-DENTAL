@@ -2,33 +2,22 @@
   <!-- Navy circle background -->
   <circle cx="50" cy="50" r="50" fill="#1E3A8A"/>
   <!--
-    Original tooth paths span x=8–92 (w≈84), y=6–126 (h≈120).
-    scale(0.6): 50w × 72h → translate(20, 10) centers it: x 25–75, y 14–86. All within 100×100.
-    stroke-width compensated upward so they remain visible after scale.
+    Tooth FILLED gold — much more visible at 16×16 than stroke-only.
+    Paths scaled via translate(20,10) scale(0.6) to fit 100×100 viewBox.
   -->
   <g transform="translate(20 10) scale(0.6)">
-    <!-- Outer boundary -->
+    <!-- Solid gold tooth body -->
     <path
       d="M50 6 C37 6 24 13 17 25 C8 40 8 60 12 78
          C16 96 25 114 37 122 C41 125 46 126 50 124
          C54 126 59 125 63 122 C75 114 84 96 88 78
          C92 60 92 40 83 25 C76 13 63 6 50 6 Z"
-      stroke="#C9A84C" stroke-width="10" fill="none"
-      stroke-linejoin="round" stroke-linecap="round"
+      fill="#C9A84C"
     />
-    <!-- Inner echo -->
+    <!-- Navy swoosh carved through it for the signature detail -->
     <path
-      d="M50 18 C40 18 29 24 24 34 C16 47 16 64 20 80
-         C24 96 32 112 43 119 C46 121 49 122 50 121
-         C51 122 54 121 57 119 C68 112 76 96 80 80
-         C84 64 84 47 76 34 C71 24 60 18 50 18 Z"
-      stroke="#C9A84C" stroke-width="5" fill="none"
-      stroke-linejoin="round" opacity="0.55"
-    />
-    <!-- Diagonal swoosh -->
-    <path
-      d="M35 30 Q47 70 61 112"
-      stroke="#C9A84C" stroke-width="9" stroke-linecap="round" fill="none"
+      d="M35 28 Q47 68 61 110"
+      stroke="#1E3A8A" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.55"
     />
   </g>
 </svg>
