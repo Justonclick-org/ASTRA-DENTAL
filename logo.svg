@@ -1,12 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Astra Dental Clinic Logo">
-  <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#0F4C81"/>
-      <stop offset="1" stop-color="#2CB1BC"/>
-    </linearGradient>
-  </defs>
-  <rect width="256" height="256" rx="44" fill="#F7FAFC"/>
-  <path d="M128 38c33 0 60 27 60 60v10c0 45-29 79-60 110-31-31-60-65-60-110V98c0-33 27-60 60-60z" fill="url(#g)"/>
-  <path d="M128 72c13 0 24 11 24 24s-11 24-24 24-24-11-24-24 11-24 24-24z" fill="#fff"/>
-  <path d="M89 163h78v17H89z" fill="#fff" opacity=".95"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 122" fill="none" role="img" aria-label="Astra Dental Clinic Logo">
+  <!-- Outer tooth boundary -->
+  <path
+    d="M50 6
+       C37 6 24 13 17 25
+       C8 40 8 60 12 78
+       C16 96 25 114 37 122
+       C41 125 46 126 50 124
+       C54 126 59 125 63 122
+       C75 114 84 96 88 78
+       C92 60 92 40 83 25
+       C76 13 63 6 50 6 Z"
+    stroke="#C9A84C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"
+  />
+  <!-- Inner echo line -->
+  <path
+    d="M50 18
+       C40 18 29 24 24 34
+       C16 47 16 64 20 80
+       C24 96 32 112 43 119
+       C46 121 49 122 50 121
+       C51 122 54 121 57 119
+       C68 112 76 96 80 80
+       C84 64 84 47 76 34
+       C71 24 60 18 50 18 Z"
+    stroke="#C9A84C" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.65"
+  />
+  <!-- Signature diagonal swoosh -->
+  <path
+    d="M35 30 Q47 70 61 112"
+    stroke="#C9A84C" stroke-width="6" stroke-linecap="round"
+  />
 </svg>
