@@ -1,32 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <!-- Navy circle background -->
-  <circle cx="32" cy="32" r="32" fill="#1E3A8A"/>
-  <!-- Outer tooth boundary -->
-  <path
-    d="M32 7
-       C25 7 18 11 14 17
-       C8 26 8 37 11 47
-       C14 57 20 67 27 72
-       C29 74 31 75 32 74
-       C33 75 35 74 37 72
-       C44 67 50 57 53 47
-       C56 37 56 26 50 17
-       C46 11 39 7 32 7 Z"
-    stroke="#C9A84C" stroke-width="4.5" fill="none" stroke-linejoin="round" stroke-linecap="round"
-  />
-  <!-- Inner echo -->
-  <path
-    d="M32 14
-       C26 14 21 17 18 23
-       C13 30 13 40 16 49
-       C19 57 24 66 30 71
-       C31 72 32 72 32 71
-       C32 72 33 72 34 71
-       C40 66 45 57 48 49
-       C51 40 51 30 46 23
-       C43 17 38 14 32 14 Z"
-    stroke="#C9A84C" stroke-width="2" fill="none" stroke-linejoin="round" opacity="0.65"
-  />
-  <!-- Diagonal swoosh -->
-  <path d="M24 21 Q30 42 38 68" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <circle cx="50" cy="50" r="50" fill="#1E3A8A"/>
+  <!--
+    Original tooth paths span x=8–92 (w≈84), y=6–126 (h≈120).
+    scale(0.6): 50w × 72h → translate(20, 10) centers it: x 25–75, y 14–86. All within 100×100.
+    stroke-width compensated upward so they remain visible after scale.
+  -->
+  <g transform="translate(20 10) scale(0.6)">
+    <!-- Outer boundary -->
+    <path
+      d="M50 6 C37 6 24 13 17 25 C8 40 8 60 12 78
+         C16 96 25 114 37 122 C41 125 46 126 50 124
+         C54 126 59 125 63 122 C75 114 84 96 88 78
+         C92 60 92 40 83 25 C76 13 63 6 50 6 Z"
+      stroke="#C9A84C" stroke-width="10" fill="none"
+      stroke-linejoin="round" stroke-linecap="round"
+    />
+    <!-- Inner echo -->
+    <path
+      d="M50 18 C40 18 29 24 24 34 C16 47 16 64 20 80
+         C24 96 32 112 43 119 C46 121 49 122 50 121
+         C51 122 54 121 57 119 C68 112 76 96 80 80
+         C84 64 84 47 76 34 C71 24 60 18 50 18 Z"
+      stroke="#C9A84C" stroke-width="5" fill="none"
+      stroke-linejoin="round" opacity="0.55"
+    />
+    <!-- Diagonal swoosh -->
+    <path
+      d="M35 30 Q47 70 61 112"
+      stroke="#C9A84C" stroke-width="9" stroke-linecap="round" fill="none"
+    />
+  </g>
 </svg>
