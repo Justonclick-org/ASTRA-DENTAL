@@ -1,16 +1,40 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <g transform="translate(20 10) scale(0.6)">
-    <path
-      d="M50 6 C37 6 24 13 17 25 C8 40 8 60 12 78 C16 96 25 114 37 122 C41 125 46 126 50 124 C54 126 59 125 63 122 C75 114 84 96 88 78 C92 60 92 40 83 25 C76 13 63 6 50 6 Z"
-      fill="#C9A84C"
-    />
-    <path
-      d="M50 18 C40 18 29 24 24 34 C16 47 16 64 20 80 C24 96 32 112 43 119 C46 121 49 122 50 121 C51 122 54 121 57 119 C68 112 76 96 80 80 C84 64 84 47 76 34 C71 24 60 18 50 18 Z"
-      fill="rgba(0,0,0,0.12)"
-    />
-    <path
-      d="M35 30 Q47 70 61 112"
-      stroke="rgba(255,255,255,0.45)" stroke-width="9" stroke-linecap="round" fill="none"
-    />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Outer molar boundary -->
+  <path
+    d="M 34 23
+       C 26 18 14 27 12 44
+       C 9 62 16 80 26 94
+       C 34 106 46 114 60 114
+       C 74 114 86 106 94 94
+       C 104 80 111 62 108 44
+       C 106 27 94 18 88 23
+       C 80 16 70 28 60 35
+       C 50 28 40 16 34 23 Z"
+    stroke="#C9A84C"
+    stroke-width="14"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Arrow dart at upper-left -->
+  <path
+    d="M 18 44 L 40 27 L 24 41"
+    stroke="#C9A84C"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Inner contour with swoosh -->
+  <path
+    d="M 34 38
+       C 38 23 51 21 60 28
+       C 69 21 80 21 90 30
+       C 100 40 100 60 94 74
+       C 90 83 82 93 74 100
+       C 65 108 56 109 50 103
+       C 44 97 45 89 52 84
+       C 59 79 70 78 80 74"
+    stroke="#C9A84C"
+    stroke-width="8.5"
+    stroke-linecap="round"
+  />
 </svg>
