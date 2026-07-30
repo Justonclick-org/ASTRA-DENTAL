@@ -6,6 +6,12 @@
  * Contact: justonclick@2026
  */
 
+import bracesImg from '../assets/images/IMG_1862.PNG'
+import smileResultImg from '../assets/images/IMG_1860.PNG'
+import smileBWImg from '../assets/images/IMG_1861.PNG'
+import smileMaleBWImg from '../assets/images/IMG_1863.PNG'
+import clinicLoungeImg from '../assets/images/IMG_1775.JPG.jpeg'
+
 export const blogPosts = [
   {
     slug: 'signs-you-need-root-canal-treatment',
@@ -31,12 +37,12 @@ export const blogPosts = [
     category: 'Implantology',
     readTime: '5 min read',
     author: 'Dr. Amit Pawar',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=80',
+    image: smileMaleBWImg,
     content: [
       'Dental implants have fundamentally changed what replacing a missing tooth means. Unlike bridges that depend on adjacent teeth for support, or dentures that rest on the gum and can shift while speaking or eating, implants are anchored directly in the jawbone — giving you a restoration that behaves, looks, and feels like a natural tooth.',
       'One of the most important benefits patients often overlook is bone preservation. When a tooth is lost, the underlying bone begins to resorb (shrink) due to lack of stimulation. Without a root in place, this process can change your facial contours over time, creating a sunken appearance around the mouth. An implant mimics the natural root by transmitting chewing forces into the bone, stopping this loss and maintaining the structure of your face.',
       'Beyond function, implants offer complete dietary freedom. There are no foods to avoid — you can eat an apple, bite into a crusty bread roll, or enjoy corn on the cob without hesitation. The crown is custom-shaded and shaped to match your natural teeth, and since there are no clasps or removable parts, even those closest to you are unlikely to notice which tooth is the implant.',
-      'Long-term, implants are often the most cost-effective choice. With proper oral hygiene and routine dental reviews, implants can function for decades. At Astra Dental, we use precision CBCT 3D imaging for treatment planning and high-quality implant systems to ensure every placement is accurate, safe, and built to last a lifetime.',
+      'Long-term, implants are often the most cost-effective choice. With proper oral hygiene and routine dental reviews, implants can function for decades. At Astra Dental, Dr. Amit Rajabhau Pawar — a specialist in Periodontology & Implantology with over 15 years of experience — uses precision CBCT 3D imaging for every placement to ensure accuracy, safety, and lasting results.',
     ],
   },
   {
@@ -47,7 +53,7 @@ export const blogPosts = [
     category: 'Preventive Care',
     readTime: '4 min read',
     author: 'Dr. Amit Pawar',
-    image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1400&q=80',
+    image: smileBWImg,
     content: [
       'Good oral hygiene is the single most powerful thing you can do for your long-term dental health — and the investment is just a few minutes a day. Yet studies consistently show that most people either miss critical steps or have never been shown the correct technique for even basic habits like brushing.',
       'Brushing correctly matters more than brushing often. Use a soft-bristled toothbrush and fluoride toothpaste. Hold the brush at a 45-degree angle to the gum line and use short, circular strokes rather than scrubbing back and forth, which can wear down enamel and irritate the gums. Two minutes, twice daily — once in the morning and once before bed — is the minimum. Most people rush through in under a minute, missing back surfaces and gum margins entirely.',
@@ -63,7 +69,7 @@ export const blogPosts = [
     category: 'Orthodontics',
     readTime: '5 min read',
     author: 'Dr. Rahul Joshi',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1400&q=80',
+    image: bracesImg,
     content: [
       'If you or your child needs orthodontic treatment, the choice between traditional braces and clear aligners is one of the first decisions you will face. Both systems move teeth effectively, but they differ significantly in visibility, comfort, treatment time, compliance requirements, and which types of cases they handle best.',
       'Metal and ceramic braces use brackets bonded to each tooth and connected by archwires. They work continuously — there is no compliance variable since they cannot be removed. This makes them the preferred choice for complex tooth movements, significant rotations, vertical corrections, and cases requiring precise control over torque. Ceramic braces offer the mechanical advantages of fixed appliances with a more aesthetic, tooth-coloured appearance.',
@@ -95,7 +101,7 @@ export const blogPosts = [
     category: 'Cosmetic Dentistry',
     readTime: '4 min read',
     author: 'Dr. Amit Pawar',
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1400&q=80',
+    image: smileResultImg,
     content: [
       'Teeth whitening is one of the most requested cosmetic dental treatments worldwide — and also one of the most misunderstood. From supermarket bleaching strips to social media "hacks" using baking soda or activated charcoal, there is no shortage of advice. Here is what the clinical evidence actually says.',
       'Myth: Whitening permanently damages your enamel. Fact: Professional whitening uses peroxide-based gels that temporarily open enamel tubules to break down stain molecules. When performed by a dentist at clinically appropriate concentrations, there is no permanent enamel change. Temporary sensitivity lasting 24–72 hours is normal and resolves completely. What can damage enamel is excessive, unsupervised use of abrasive home products over long periods — not professional in-chair treatment.',
@@ -109,8 +115,7 @@ export const featuredBlog = {
   title: 'Why preventive care is the best investment for long-term dental health',
   excerpt:
     'The strongest dental practices educate first. Preventive checkups, hygiene routines and early intervention save time, cost and discomfort — and protect your smile for decades.',
-  author: 'Dr. Ananya Mehta',
+  author: 'Dr. Amit Pawar',
   readTime: '4 min read',
-  image:
-    'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1400&q=80',
+  image: clinicLoungeImg,
 }

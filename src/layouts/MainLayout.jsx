@@ -13,13 +13,15 @@ import ScrollTop from '../components/ScrollTop'
 import WhatsAppButton from '../components/WhatsAppButton'
 import CallButton from '../components/CallButton'
 import StickyAppointmentButton from '../components/StickyAppointmentButton'
+import BookingModal from '../components/BookingModal'
+import { BookingProvider } from '../context/BookingContext'
 import useScrollToTop from '../hooks/useScrollToTop'
 
 function MainLayout() {
   useScrollToTop()
 
   return (
-    <>
+    <BookingProvider>
       <Navbar />
       <main>
         <Outlet />
@@ -29,7 +31,8 @@ function MainLayout() {
       <CallButton />
       <WhatsAppButton />
       <ScrollTop />
-    </>
+      <BookingModal />
+    </BookingProvider>
   )
 }
 

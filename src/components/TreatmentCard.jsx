@@ -16,6 +16,11 @@ function TreatmentCard({ treatment }) {
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25 }}
     >
+      {treatment.image && (
+        <div className="treatment-card-img">
+          <img src={treatment.image} alt={treatment.title} loading="lazy" />
+        </div>
+      )}
       <div className="card-body">
         <h3>{treatment.title}</h3>
         <p>{treatment.shortDescription}</p>

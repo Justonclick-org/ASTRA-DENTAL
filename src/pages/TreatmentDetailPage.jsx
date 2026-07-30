@@ -17,8 +17,6 @@ import { treatments } from '../data/treatmentData'
 import { buildFaqSchema } from '../services/schemaService'
 import { fadeUp, staggerContainer } from '../animations/motionVariants'
 
-const bannerImg = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80'
-
 function TreatmentDetailPage({ slug }) {
   const treatment = treatments.find((item) => item.slug === slug)
 
@@ -39,7 +37,7 @@ function TreatmentDetailPage({ slug }) {
         eyebrow="Treatment Detail"
         title={treatment.title}
         description={treatment.shortDescription}
-        bgImage={bannerImg}
+        bgImage={treatment.image}
       />
 
       {/* Quick stats strip */}

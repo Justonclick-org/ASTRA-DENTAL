@@ -9,22 +9,24 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import Button from './Button'
+import { useBooking } from '../context/BookingContext'
+import toothLogo from '../assets/tooth-logo.svg'
 
 const navItems = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Treatments', path: '/treatments' },
-  { label: 'Gallery', path: '/gallery' },
-  { label: 'Videos', path: '/video-library' },
+  { label: 'Home',         path: '/' },
+  { label: 'About',        path: '/about' },
+  { label: 'Treatments',   path: '/treatments' },
+  { label: 'Gallery',      path: '/gallery' },
+  { label: 'Videos',       path: '/video-library' },
   { label: 'Testimonials', path: '/testimonials' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Blog',         path: '/blog' },
+  { label: 'Contact',      path: '/contact' },
 ]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { openBooking } = useBooking()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -32,14 +34,23 @@ function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const isTransparent = !scrolled
+  const handleBook = () => {
+    setIsOpen(false)
+    openBooking()
+  }
 
   return (
-    <header className={`site-header${isTransparent ? '' : ' sticky'}`}>
+    <header className={`site-header${scrolled ? ' sticky' : ''}`}>
       <div className="emergency-bar">Emergency Consultation: +91 98605 32742</div>
       <div className="container nav-wrap">
         <Link to="/" className="logo">
-          ASTRA DENTAL
+          <span className="logo-icon-wrap">
+            <img src={toothLogo} alt="Astra Dental" className="logo-icon" />
+          </span>
+          <span className="logo-name">
+            <span className="logo-astra">ASTRA</span>
+            <span className="logo-dental">DENTAL</span>
+          </span>
         </Link>
 
         <nav className={`nav-links ${isOpen ? 'open' : ''}`} aria-label="Main">
@@ -48,7 +59,9 @@ function Navbar() {
               {item.label}
             </NavLink>
           ))}
-          <Button to="/book-appointment">Book Appointment</Button>
+          <button type="button" className="btn btn-primary nav-book-btn" onClick={handleBook}>
+            Book Appointment
+          </button>
         </nav>
 
         <button

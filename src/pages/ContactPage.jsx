@@ -13,7 +13,7 @@ import ContactForm from '../components/ContactForm'
 import Button from '../components/Button'
 import { contactInfo } from '../data/contactData'
 
-const bannerImg = 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80'
+import bannerImg from '../assets/images/IMG_1776.JPG.jpeg'
 
 function ContactPage() {
   return (

@@ -28,6 +28,10 @@ const PrivacyPolicyPage = lazy(() => import('../pages/PrivacyPolicyPage'))
 const TermsPage = lazy(() => import('../pages/TermsPage'))
 const MedicalDisclaimerPage = lazy(() => import('../pages/MedicalDisclaimerPage'))
 const CookiePolicyPage = lazy(() => import('../pages/CookiePolicyPage'))
+const SmileMakeoverPage = lazy(() => import('../pages/SmileMakeoverPage'))
+const RootCanalPage = lazy(() => import('../pages/RootCanalPage'))
+const DentalImplantsPage = lazy(() => import('../pages/DentalImplantsPage'))
+const OrthoPage = lazy(() => import('../pages/OrthoPage'))
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'))
 
 function AppRouter() {
@@ -53,14 +57,12 @@ function AppRouter() {
         <Route path="/medical-disclaimer" element={<MedicalDisclaimerPage />} />
         <Route path="/cookie-policy" element={<CookiePolicyPage />} />
 
-        <Route path="/dental-implants" element={<TreatmentDetailPage slug="dental-implants" />} />
-        <Route
-          path="/root-canal-treatment"
-          element={<TreatmentDetailPage slug="root-canal-treatment" />}
-        />
-        <Route path="/braces-aligners" element={<TreatmentDetailPage slug="braces-aligners" />} />
+        <Route path="/dental-implants" element={<DentalImplantsPage />} />
+        <Route path="/root-canal-treatment" element={<RootCanalPage />} />
+        <Route path="/braces-aligners" element={<OrthoPage />} />
         <Route path="/teeth-whitening" element={<TreatmentDetailPage slug="teeth-whitening" />} />
         <Route path="/smile-makeover" element={<TreatmentDetailPage slug="smile-makeover" />} />
+        <Route path="/smile-makeover-chembur" element={<SmileMakeoverPage />} />
         <Route
           path="/pediatric-dentistry"
           element={<TreatmentDetailPage slug="pediatric-dentistry" />}

@@ -6,17 +6,19 @@
  * Contact: justonclick@2026
  */
 
+import drAmitPhoto from '../assets/images/dr.amit.PNG'
+
 export const doctors = [
   {
     id: 1,
-    name: 'Dr. Amit Pawar',
-    qualification: 'BDS, MDS',
+    name: 'Dr. Amit Rajabhau Pawar',
+    qualification: 'BDS (GDC Mumbai), MDS (SDC, Chennai)',
     experience: '15+ Years',
-    specialization: 'Implantology, Cosmetic & Restorative Dentistry',
-    memberships: ['Indian Dental Association', 'ISOI', 'IDA Maharashtra'],
+    specialization: 'Periodontology & Implantology',
+    memberships: ['Indian Dental Association', 'Indian Society of Periodontology', 'IDA Maharashtra', 'World Record Holder'],
     languages: ['English', 'Hindi', 'Marathi'],
-    bio: 'Dr. Amit Pawar is the founder and principal dentist at Astra Dental Clinic, Chembur. With over 15 years of clinical experience and an MDS degree, he specialises in dental implants, smile makeovers, and comprehensive restorative dentistry — combining clinical precision with a genuinely patient-first approach.',
-    image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80',
+    bio: 'Dr. Amit Pawar is the founder and principal dentist at Astra Dental Clinic, Chembur. A World Record Holder with an MDS in Periodontology & Implantology from SDC Chennai, he brings over 15 years of clinical excellence across perio-plastic surgery, laser dentistry, dental implants and orthodontic care.',
+    image: drAmitPhoto,
   },
   {
     id: 2,
@@ -31,13 +33,13 @@ export const doctors = [
   },
   {
     id: 3,
-    name: 'Dr. Rahul Joshi',
+    name: 'Dr. Manjiri Bhate',
     qualification: 'BDS, MDS Orthodontics',
-    experience: '10 Years',
-    specialization: 'Braces, Clear Aligners, Smile Alignment',
+    experience: '10+ Years',
+    specialization: 'Clear Aligners, Ceramic & Self-Ligating Braces, Adult & Teen Orthodontics, Bite Correction',
     memberships: ['Indian Orthodontic Society', 'IDA'],
     languages: ['English', 'Hindi', 'Marathi'],
-    bio: 'Dr. Joshi designs customised orthodontic treatment plans for teens and adults, combining digital smile simulation with precision bracket and aligner systems for optimal facial balance and bite correction.',
+    bio: 'Dr. Bhate is a Specialist Orthodontist who focuses exclusively on orthodontic treatment — clear aligners, ceramic braces, self-ligating braces, and bite correction for teens and adults, combining digital 3D smile simulation with precision bracket and aligner systems.',
     image: 'https://images.unsplash.com/photo-1594824475317-6ccddf7f7f1c?auto=format&fit=crop&w=800&q=80',
   },
 ]

@@ -9,6 +9,10 @@
 export const siteConfig = {
   brandName: 'Astra Dental Clinic',
   shortName: 'Astra Dental',
+  tagline: 'Perio-plastic, Laser, Implant and Orthodontic Centre',
+  doctorName: 'Dr. Amit Rajabhau Pawar',
+  doctorQualification: 'BDS (GDC Mumbai), MDS (SDC, Chennai)',
+  doctorSpecialization: 'Periodontology & Implantology',
   phone: '+91 98605 32742',
   whatsapp: '+919860532742',
   email: 'support@astradentalclinic.com',
@@ -26,10 +30,15 @@ export const siteConfig = {
     linkedin: 'https://www.linkedin.com/',
   },
   operatingHours: [
-    'Monday – Friday: 9:00 AM – 9:00 PM',
-    'Saturday: 9:00 AM – 9:00 PM',
-    'Sunday: 9:00 AM – 5:00 PM',
+    'Monday – Saturday: 10:00 AM – 9:00 PM',
+    'Sunday: By Appointment Only',
   ],
+  registrationNumber: 'Reg. No. A-47594',
+  whatsappBookingUrl: 'https://wa.me/919860532742?text=Hello%20Astra%20Dental%20Clinic!%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20the%20available%20slots.',
+  // Step 1: go to forms.google.com → create form → Share button → Copy link → paste here
+  googleFormUrl: '',
+  // Step 2 (optional): Send → Embed icon → copy the src="..." URL → paste here for embedded form
+  googleFormEmbedUrl: '',
   canonicalBaseUrl: 'https://www.astradentalclinic.com',
   logo: '/logo.svg',
 }

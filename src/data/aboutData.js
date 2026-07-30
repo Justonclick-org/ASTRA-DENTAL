@@ -7,13 +7,13 @@
  */
 
 export const clinicStory =
-  'Astra Dental Clinic was founded by Dr. Amit Pawar, BDS MDS, with a single, unwavering commitment: to make world-class dental care genuinely accessible, transparent, and comfortable for every patient in Chembur and across Mumbai. With over 15 years of clinical experience in implantology, cosmetic and restorative dentistry, Dr. Pawar built Astra as a multi-specialty practice where advanced technology meets a deeply patient-first philosophy. From a child\'s very first dental visit to complex full-mouth rehabilitations, every treatment at Astra is planned with precision, explained clearly, and delivered with care. We believe that a confident smile is not a luxury — it is something every patient deserves.'
+  'Astra Dental Clinic was founded by Dr. Amit Rajabhau Pawar, BDS (GDC Mumbai), MDS in Periodontology & Implantology (SDC, Chennai) — a World Record Holder and one of Mumbai\'s most respected specialist dentists. Established in Chembur with a single, unwavering commitment, Astra has grown into a trusted perio-plastic, laser, implant and orthodontic centre where advanced technology meets a deeply patient-first philosophy. With over 15 years of clinical excellence, Dr. Pawar and his team handle everything from a child\'s first dental visit to complex full-mouth implant rehabilitations — every treatment planned with precision, explained clearly, and delivered with genuine care.'
 
 export const mission =
-  'To improve the oral health and confidence of every patient through exceptional clinical care, honest communication, and a warm, anxiety-free environment that makes dental visits something to look forward to rather than fear.'
+  'To deliver the highest standard of periodontal, implant and cosmetic dental care to every patient in Chembur and across Mumbai — through honest communication, advanced clinical techniques, and an anxiety-free environment that makes dental visits a positive experience.'
 
 export const vision =
-  'To be the most trusted dental clinic in Chembur and across Mumbai — where patients return not just because they have to, but because they genuinely feel heard, respected, and cared for by Dr. Amit Pawar and the entire Astra team.'
+  'To be Mumbai\'s most trusted specialist dental clinic — where every patient leaves with a healthier smile, a clear understanding of their treatment, and the confidence to return whenever they need us. Led by Dr. Amit Pawar, World Record Holder, Astra Dental aims to redefine what premium dental care looks and feels like in India.'
 
 export const coreValues = [
   'Integrity',

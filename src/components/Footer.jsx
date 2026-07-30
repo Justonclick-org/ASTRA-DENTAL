@@ -9,7 +9,7 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { siteConfig } from '../constants/siteConfig'
-import Button from './Button'
+import toothLogo from '../assets/tooth-logo.svg'
 
 function Footer() {
   return (
@@ -19,11 +19,19 @@ function Footer() {
         {/* ── Brand ── */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="footer-logo-astra">ASTRA DENTAL</span>
-            <span className="footer-logo-clinic">CLINIC</span>
+            <span className="footer-logo-icon-wrap">
+              <img src={toothLogo} alt="Astra Dental" className="footer-logo-icon" />
+            </span>
+            <div className="footer-logo-text">
+              <span className="footer-logo-astra">ASTRA DENTAL</span>
+              <span className="footer-logo-clinic">CLINIC</span>
+            </div>
           </div>
           <p className="footer-tagline">
-            Your trusted partner for <em>healthy, confident smiles.</em>
+            Perio-plastic, Laser, Implant &amp; Orthodontic Centre.
+          </p>
+          <p className="footer-reg">
+            Dr. Amit Rajabhau Pawar · BDS (GDC Mumbai), MDS (SDC, Chennai) · {siteConfig.registrationNumber}
           </p>
           <div className="footer-contact-items">
             <a className="footer-contact-item" href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}>
@@ -89,19 +97,16 @@ function Footer() {
           <div className="footer-hours">
             <div className="footer-hour-row">
               <span>Monday – Saturday</span>
-              <span>9:00 AM – 9:00 PM</span>
+              <span>10:00 AM – 9:00 PM</span>
             </div>
             <div className="footer-hour-row">
               <span>Sunday</span>
-              <span>9:00 AM – 5:00 PM</span>
+              <span>By Appointment</span>
             </div>
             <div className="footer-emergency">
               <span>Emergency Line</span>
               <a href={`tel:${siteConfig.emergencyPhone.replace(/\s/g, '')}`}>{siteConfig.emergencyPhone}</a>
             </div>
-          </div>
-          <div className="footer-cta">
-            <Button to="/book-appointment">Book Appointment</Button>
           </div>
         </div>
 

@@ -15,7 +15,7 @@ import CTASection from '../components/CTASection'
 import { treatments } from '../data/treatmentData'
 import { fadeUp, staggerContainer } from '../animations/motionVariants'
 
-const bannerImg = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80'
+import bannerImg from '../assets/images/IMG_1886.JPG.jpeg'
 
 function TreatmentsPage() {
   return (

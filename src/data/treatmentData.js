@@ -6,10 +6,17 @@
  * Contact: justonclick@2026
  */
 
+import treatmentRoomImg from '../assets/images/IMG_1886.JPG.jpeg'
+import bracesImg from '../assets/images/IMG_1862.PNG'
+import smileResultImg from '../assets/images/IMG_1860.PNG'
+import smileBWImg from '../assets/images/IMG_1861.PNG'
+import clinicLoungeImg from '../assets/images/IMG_1775.JPG.jpeg'
+
 export const treatments = [
   {
     slug: 'dental-implants',
     title: 'Dental Implants',
+    image: treatmentRoomImg,
     shortDescription: 'Permanent replacement for missing teeth with natural look, feel, and bite strength.',
     highlights: [
       { stat: '60–90 min', label: 'Procedure Time' },
@@ -17,7 +24,7 @@ export const treatments = [
       { stat: '24–48 hrs', label: 'Recovery' },
     ],
     whatIs:
-      'Dental implants are small titanium posts surgically placed into the jawbone to act as artificial tooth roots. Once integrated with the bone — a process called osseointegration — they provide a stable foundation for a crown, bridge, or denture. Unlike traditional dentures, implants do not slip, click, or require removal at night, giving you the confidence of natural teeth in both appearance and function.',
+      'Dental implants are small titanium posts surgically placed into the jawbone to act as artificial tooth roots. Once integrated with the bone — a process called osseointegration — they provide a stable foundation for a crown, bridge, or denture. Unlike traditional dentures, implants do not slip, click, or require removal at night, giving you the confidence of natural teeth in both appearance and function. Dr. Amit Pawar performs implant placements in Astra Dental\'s state-of-the-art treatment room using precision CBCT 3D imaging for every case.',
     benefits: [
       'Looks and feels like a natural tooth',
       'Prevents jawbone loss after extraction',
@@ -28,7 +35,7 @@ export const treatments = [
     whoNeedsIt:
       'Adults with one or more missing teeth who have sufficient jawbone density, or those willing to undergo bone grafting when required. Non-smokers and patients with well-controlled systemic health are the best candidates.',
     procedure:
-      'Treatment begins with a CBCT scan and detailed 3D planning. The implant is placed under local anesthesia, followed by a healing period of 8–16 weeks for osseointegration. A custom crown or bridge is then attached to the implant abutment, completing your new smile.',
+      'Treatment begins with a CBCT scan and detailed 3D planning. The implant is placed under local anesthesia in our fully equipped treatment room, followed by a healing period of 8–16 weeks for osseointegration. A custom crown or bridge is then attached to the implant abutment, completing your new smile.',
     recovery:
       'Most patients resume normal routine within 24–48 hours. Mild swelling and tenderness are expected for the first few days and are managed with prescribed medication. Full bone integration takes a few months, during which a temporary restoration maintains aesthetics.',
     faqs: [
@@ -40,6 +47,7 @@ export const treatments = [
   {
     slug: 'root-canal-treatment',
     title: 'Root Canal Treatment',
+    image: treatmentRoomImg,
     shortDescription: 'Save an infected or badly damaged tooth with painless, precision endodontic care.',
     highlights: [
       { stat: '45–90 min', label: 'Per Session' },
@@ -70,6 +78,7 @@ export const treatments = [
   {
     slug: 'braces-aligners',
     title: 'Braces & Aligners',
+    image: bracesImg,
     shortDescription: 'Correct crowded, spaced, or misaligned teeth with modern orthodontic solutions.',
     highlights: [
       { stat: '6–24 mo', label: 'Treatment Duration' },
@@ -100,6 +109,7 @@ export const treatments = [
   {
     slug: 'teeth-whitening',
     title: 'Teeth Whitening',
+    image: smileResultImg,
     shortDescription: 'Professional stain removal and brightening for a confident, radiant smile.',
     highlights: [
       { stat: '60–90 min', label: 'In-chair Session' },
@@ -130,6 +140,7 @@ export const treatments = [
   {
     slug: 'smile-makeover',
     title: 'Smile Makeover',
+    image: smileResultImg,
     shortDescription: 'Comprehensive aesthetic planning to craft your most confident, balanced smile.',
     highlights: [
       { stat: 'Custom', label: 'Digital Design' },
@@ -160,6 +171,7 @@ export const treatments = [
   {
     slug: 'pediatric-dentistry',
     title: 'Pediatric Dentistry',
+    image: clinicLoungeImg,
     shortDescription: 'Gentle, fun, and preventive dental care designed especially for children.',
     highlights: [
       { stat: 'Age 1+', label: 'First Visit' },
@@ -190,6 +202,7 @@ export const treatments = [
   {
     slug: 'cosmetic-dentistry',
     title: 'Cosmetic Dentistry',
+    image: smileBWImg,
     shortDescription: 'Aesthetic treatments for smile refinement, symmetry, and lasting confidence.',
     highlights: [
       { stat: 'Same-day', label: 'Options Available' },

@@ -6,36 +6,36 @@
  * Contact: justonclick@2026
  */
 
-import image0 from '../assets/images/image.png'
-import image1 from '../assets/images/image1.png'
-import image2 from '../assets/images/image2.png'
-import image3 from '../assets/images/image3.png'
-import image5 from '../assets/images/image5.png'
+import clinicExterior from '../assets/images/IMG_1942.JPG.jpeg'
+import clinicReception from '../assets/images/IMG_1776.JPG.jpeg'
+import clinicLounge from '../assets/images/IMG_1775.JPG.jpeg'
+import treatmentRoom from '../assets/images/IMG_1886.JPG.jpeg'
+import patientSmile from '../assets/images/IMG_1860.PNG'
 
 export const heroSlides = [
   {
-    image: image0,
-    title: 'Modern clinical entrance',
-    caption: 'A premium first impression from the outside in.',
+    image: clinicExterior,
+    title: 'Astra Dental Clinic — Chembur Mumbai',
+    caption: 'Perio-plastic, Laser, Implant and Orthodontic Centre.',
   },
   {
-    image: image1,
-    title: 'Reception and welcome zone',
-    caption: 'Warm interiors designed to reduce patient anxiety.',
+    image: clinicReception,
+    title: 'A warm welcome from the moment you walk in',
+    caption: 'Clean, calm and designed to reduce patient anxiety.',
   },
   {
-    image: image2,
-    title: 'Signature front desk experience',
-    caption: 'Clean, calm and luxury-inspired arrival experience.',
+    image: clinicLounge,
+    title: 'Certified expertise you can trust',
+    caption: "Dr. Amit Pawar's qualifications displayed with pride.",
   },
   {
-    image: image3,
-    title: 'Clinic corridor and visual branding',
-    caption: 'Consistent visual identity across the clinic journey.',
+    image: treatmentRoom,
+    title: 'State-of-the-art treatment room',
+    caption: 'Advanced equipment for precise, comfortable procedures.',
   },
   {
-    image: image5,
-    title: 'Comfortable patient lounge',
-    caption: 'A reassuring space before treatment begins.',
+    image: patientSmile,
+    title: 'Real results from real patients',
+    caption: 'Natural, confident smiles delivered every day.',
   },
 ]

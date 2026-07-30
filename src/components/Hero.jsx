@@ -58,15 +58,10 @@ function Hero({ data, slides = [] }) {
               <span>4.9 · 500+ Google Reviews</span>
             </motion.div>
 
-            {/* Eyebrow */}
-            <motion.p className="eyebrow hero-eyebrow" variants={fadeUp}>
-              Premium Dental Care · Chembur, Mumbai
-            </motion.p>
-
-            {/* Headline with italic gold accent */}
+            {/* Headline */}
             <motion.h1 variants={fadeUp}>
-              Advanced Dental Care For Healthy,{' '}
-              <em>Confident Smiles.</em>
+              {data.title}{' '}
+              <em>{data.titleAccent}</em>
             </motion.h1>
 
             {/* Subtitle */}
@@ -76,7 +71,7 @@ function Hero({ data, slides = [] }) {
 
             {/* Badges */}
             <motion.div className="hero-badges" variants={staggerFast}>
-              {['Advanced Technology', 'Pain-Free Dentistry', 'Same-Day Consultations'].map((badge) => (
+              {data.badges.map((badge) => (
                 <motion.span key={badge} variants={scalePop}>
                   {badge}
                 </motion.span>
@@ -86,8 +81,8 @@ function Hero({ data, slides = [] }) {
             {/* CTAs */}
             <motion.div className="hero-actions" variants={fadeUp}>
               <Button to="/book-appointment">Book Appointment</Button>
-              <Button href="tel:+919860532742" variant="ghost">
-                Call Now →
+              <Button href={`https://wa.me/919860532742`} variant="ghost">
+                WhatsApp Consultation
               </Button>
             </motion.div>
           </motion.div>

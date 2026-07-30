@@ -6,57 +6,65 @@
  * Contact: justonclick@2026
  */
 
+import smileResult from '../assets/images/IMG_1860.PNG'
+import smileBW from '../assets/images/IMG_1861.PNG'
+import bracesResult from '../assets/images/IMG_1862.PNG'
+import smileMaleBW from '../assets/images/IMG_1863.PNG'
+import clinicReception from '../assets/images/IMG_1776.JPG.jpeg'
+import clinicLounge from '../assets/images/IMG_1775.JPG.jpeg'
+import treatmentRoom from '../assets/images/IMG_1886.JPG.jpeg'
+
 export const galleryItems = [
   {
-    category: 'Smile Makeovers',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    category: 'Dental Implants',
-    image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    category: 'Teeth Whitening',
-    image: 'https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=1200&q=80',
+    category: 'Smile Makeover',
+    image: smileResult,
   },
   {
     category: 'Orthodontics',
-    image: 'https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?auto=format&fit=crop&w=1200&q=80',
+    image: bracesResult,
   },
   {
     category: 'Clinic Interior',
-    image: 'https://images.unsplash.com/photo-1666214277655-b59f8a1b3a5d?auto=format&fit=crop&w=1200&q=80',
+    image: clinicReception,
   },
   {
-    category: 'Equipment',
-    image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1200&q=80',
+    category: 'Treatment Room',
+    image: treatmentRoom,
   },
   {
-    category: 'Staff',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+    category: 'Patient Smile',
+    image: smileBW,
+  },
+  {
+    category: 'Waiting Lounge',
+    image: clinicLounge,
+  },
+  {
+    category: 'Patient Results',
+    image: smileMaleBW,
   },
 ]
 
 export const beforeAfterCases = [
   {
-    title: 'Full Smile Makeover',
+    title: 'Smile Transformation',
     treatment: 'Cosmetic Dentistry',
-    before: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
-    after: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
-    result: 'Balanced shade, improved symmetry and a brighter natural smile.',
+    before: smileBW,
+    after: smileResult,
+    result: 'Natural white shade, improved symmetry and a confident, radiant smile.',
   },
   {
-    title: 'Implant Rehabilitation',
-    treatment: 'Dental Implants',
-    before: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80',
-    after: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80',
-    result: 'Restored chewing comfort with a fixed natural-looking replacement.',
-  },
-  {
-    title: 'Alignment Correction',
+    title: 'Orthodontic Correction',
     treatment: 'Braces & Aligners',
-    before: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80',
-    after: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80',
-    result: 'Straighter teeth, better bite balance and improved oral hygiene access.',
+    before: bracesResult,
+    after: smileMaleBW,
+    result: 'Straighter teeth, corrected bite and significantly improved oral hygiene access.',
+  },
+  {
+    title: 'Full Clinic Experience',
+    treatment: 'Clinic Tour',
+    before: clinicLounge,
+    after: clinicReception,
+    result: 'State-of-the-art facility designed for patient comfort and clinical excellence.',
   },
 ]

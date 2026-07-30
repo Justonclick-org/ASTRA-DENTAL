@@ -7,13 +7,17 @@
  */
 
 import { motion } from 'framer-motion'
-import Button from './Button'
+import { FaPhone, FaWhatsapp, FaCalendarAlt } from 'react-icons/fa'
+import { useBooking } from '../context/BookingContext'
+import { siteConfig } from '../constants/siteConfig'
 import { fadeUp, slideLeft, staggerContainer } from '../animations/motionVariants'
 
 function CTASection({
-  title = 'Book Your Consultation Today',
-  description = 'Connect with our specialists for a personalized treatment plan.',
+  title = 'Ready for a Healthier Smile?',
+  description = 'Call us, WhatsApp, or book online — we confirm your slot within 2 hours.',
 }) {
+  const { openBooking } = useBooking()
+
   return (
     <motion.section
       className="cta-section container"
@@ -23,14 +27,27 @@ function CTASection({
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.div variants={slideLeft}>
-        <p className="eyebrow">Quick Appointment</p>
+        <p className="eyebrow">Get In Touch</p>
         <h2>{title}</h2>
         <p>{description}</p>
       </motion.div>
 
       <motion.div className="cta-actions" variants={fadeUp}>
-        <Button to="/book-appointment">Book Appointment</Button>
-        <Button to="/contact" variant="ghost">Contact Clinic</Button>
+        <a
+          href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+          className="btn btn-primary"
+        >
+          <FaPhone style={{ marginRight: 8 }} />
+          {siteConfig.phone}
+        </a>
+        <button type="button" className="btn btn-whatsapp" onClick={openBooking}>
+          <FaWhatsapp style={{ marginRight: 8 }} />
+          WhatsApp Booking
+        </button>
+        <button type="button" className="btn btn-ghost" onClick={openBooking}>
+          <FaCalendarAlt style={{ marginRight: 8 }} />
+          Book Online
+        </button>
       </motion.div>
     </motion.section>
   )

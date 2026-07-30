@@ -1,0 +1,81 @@
+/**
+ * Astra Dental Clinic Website
+ * Author: Justonclik Team
+ * Copyright (c) Justonclik 2026
+ * All Rights Reserved
+ * Contact: justonclick@2026
+ */
+
+export const implantTrustBar = [
+  '7+ Years Implantology Expertise',
+  'Advanced 3D CBCT & Navigation Tech',
+  'Premium FDA-Approved Implants',
+  '100% Ethical, Transparent Pricing',
+]
+
+export const implantDifference = [
+  {
+    title: 'Advanced 3D Diagnostics',
+    desc: 'We use in-house CBCT (Cone Beam Computed Tomography) scanning to map your jawbone, nerves, and sinus cavities in 3D before surgery begins.',
+  },
+  {
+    title: 'Computer-Guided Navigation',
+    desc: 'Utilizing digital implant planning, we create surgical guides that dictate the exact angle and depth of your implant, minimizing incisions and drastically speeding up recovery.',
+  },
+  {
+    title: 'Solutions for "Hopeless" Cases',
+    desc: 'Have you been told you don’t have enough bone for implants? Dr. Amit specializes in advanced bone grafting and Zygomatic Implants (implants anchored in the cheekbone), offering full-mouth rehabilitation even in cases of severe bone loss.',
+  },
+]
+
+export const implantSolutions = [
+  {
+    title: 'Single & Multiple Tooth Replacement',
+    desc: 'Replace one or several missing teeth without grinding down your adjacent healthy teeth. Our implants look, feel, and function exactly like natural teeth.',
+  },
+  {
+    title: 'Full-Mouth Rehabilitation (All-on-4 / All-on-6)',
+    desc: 'Struggling with loose dentures or failing teeth? We can replace an entire arch of teeth using just 4 to 6 strategically placed implants. Walk in with failing teeth, and walk out with a fixed, permanent smile.',
+  },
+  {
+    title: 'Zygomatic Implants (For Severe Bone Loss)',
+    desc: 'If standard implants aren’t an option due to maxillary bone loss, Zygomatic implants provide a secure foundation without the need for extensive, time-consuming bone grafting procedures.',
+  },
+]
+
+export const implantBrands = ['Straumann', 'Nobel Biocare', 'Osstem', 'Dentium']
+
+export const implantCaseLabels = [
+  'Full Mouth Rehabilitation with All-on-6 Implants',
+  'Single Anterior Implant',
+  'Zygomatic Implant — Severe Bone Loss Case',
+]
+
+export const implantAreas = ['Chembur', 'Tilak Nagar', 'Ghatkopar', 'Mumbai Metropolitan Region']
+
+export const implantFaqs = [
+  {
+    question: 'Who is the best doctor for dental implants in Chembur and Tilak Nagar?',
+    answer: 'Patients across Chembur and Tilak Nagar trust Dr. Amit Pawar at Astra Dental. As a qualified MDS Periodontist and Implantologist with over 7 years of specialized experience, Dr. Amit handles everything from routine single-tooth implants to complex full-mouth reconstructions and Zygomatic implants.',
+  },
+  {
+    question: 'How much do dental implants cost at Astra Dental in Chembur?',
+    answer: 'The cost of dental implants varies based on the premium brand selected (such as Osstem, Dentium, Straumann, or Nobel Biocare) and whether additional procedures like bone grafting or 3D surgical guides are required. During your consultation at our Chembur clinic, we provide a 100% transparent, itemized estimate with no hidden fees.',
+  },
+  {
+    question: 'Is the dental implant procedure painful?',
+    answer: 'No. At Astra Dental, we use advanced local anesthesia and computer-guided surgical planning. Because the 3D CBCT scan allows us to plan the exact placement beforehand, the actual procedure is minimally invasive, fast, and highly comfortable. Most patients report less discomfort than a simple tooth extraction.',
+  },
+  {
+    question: 'Can I get my teeth fixed in one day? (Immediate Loading)',
+    answer: 'In many cases, yes. Utilizing digital implant planning and premium systems like Nobel Biocare and Straumann, Dr. Amit Pawar can often extract a failing tooth, place the implant, and attach a temporary fixed tooth in a single visit at our Chembur facility.',
+  },
+  {
+    question: 'What are Zygomatic implants, and does Astra Dental offer them?',
+    answer: 'Zygomatic implants are highly specialized, extra-long implants anchored into the cheekbone rather than the jawbone. They are the ideal solution for patients with severe upper jaw bone loss who have been told they cannot have standard implants. Dr. Amit Pawar is uniquely trained to perform this advanced procedure right here in Mumbai.',
+  },
+  {
+    question: 'Why should patients in Tilak Nagar and Chembur choose Astra Dental?',
+    answer: 'Astra Dental combines the expertise of a specialist Implantologist (Dr. Amit Pawar) with world-class technology (CBCT, digital navigation) and ethical pricing. We use only FDA-approved materials and top-tier lab prosthetics to ensure your new teeth last a lifetime.',
+  },
+]

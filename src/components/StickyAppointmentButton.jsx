@@ -6,13 +6,14 @@
  * Contact: justonclick@2026
  */
 
-import { Link } from 'react-router-dom'
+import { useBooking } from '../context/BookingContext'
 
 function StickyAppointmentButton() {
+  const { openBooking } = useBooking()
   return (
-    <Link to="/book-appointment" className="sticky-appointment-btn">
+    <button type="button" className="sticky-appointment-btn" onClick={openBooking}>
       Book Appointment
-    </Link>
+    </button>
   )
 }
 

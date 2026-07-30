@@ -15,7 +15,7 @@ import CTASection from '../components/CTASection'
 import { doctors } from '../data/doctorData'
 import { fadeUp, staggerContainer } from '../animations/motionVariants'
 
-const bannerImg = 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80'
+import bannerImg from '../assets/images/IMG_1775.JPG.jpeg'
 
 function TeamPage() {
   return (
