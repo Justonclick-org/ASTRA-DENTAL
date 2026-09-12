@@ -9,14 +9,12 @@
 import { useState } from 'react'
 import { FaWhatsapp, FaPhone, FaCheckCircle, FaChevronDown, FaTooth } from 'react-icons/fa'
 import SEOComponent from '../components/SEOComponent'
-import ReviewCard from '../components/ReviewCard'
+import GoogleReviewsCard from '../components/GoogleReviewsCard'
 import { siteConfig } from '../constants/siteConfig'
 import { buildFaqSchema } from '../services/schemaService'
-import { galleryItems } from '../data/galleryData'
-import { testimonials } from '../data/testimonialData'
 import {
   implantTrustBar, implantDifference, implantSolutions,
-  implantBrands, implantCaseLabels, implantAreas, implantFaqs,
+  implantBrands, implantCases, implantAreas, implantFaqs,
 } from '../data/implantData'
 
 const waLink = (text) => `https://wa.me/919860532742?text=${encodeURIComponent(text)}`
@@ -45,10 +43,6 @@ function ImFaq({ items }) {
 }
 
 function DentalImplantsPage() {
-  const imgBefore = galleryItems[1]?.image
-  const imgAfter = galleryItems[0]?.image
-  const implantReview = testimonials.find((t) => t.treatment === 'Dental Implant')
-
   return (
     <>
       <SEOComponent
@@ -102,10 +96,15 @@ function DentalImplantsPage() {
               <span className="sm-stat-value">FDA</span>
               <span className="sm-stat-label">Approved Implant Systems</span>
             </div>
-            <div className="sm-stat-card sm-stat-card--gold">
-              <span className="sm-stat-value">★ 4.9</span>
-              <span className="sm-stat-label">Google Rating</span>
-            </div>
+            <a
+              href={siteConfig.googleReviewsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="sm-stat-card sm-stat-card--gold"
+            >
+              <span className="sm-stat-value">★★★★★</span>
+              <span className="sm-stat-label">Read Our Reviews</span>
+            </a>
           </div>
         </div>
       </section>
@@ -147,11 +146,6 @@ function DentalImplantsPage() {
               </div>
             ))}
           </div>
-          <div className="im-solutions-cta">
-            <a href={waLink('Hi Astra Dental, I am not sure which implant solution I need — can I schedule a diagnostic scan?')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> Not Sure What You Need? Schedule a Diagnostic Scan
-            </a>
-          </div>
         </div>
       </section>
 
@@ -184,29 +178,35 @@ function DentalImplantsPage() {
           <h2>Implant Transformations by Dr. Amit Pawar</h2>
         </div>
         <div className="sm-ba-grid">
-          {implantCaseLabels.map((label) => (
-            <div key={label} className="sm-ba-card">
-              <div className="sm-ba-images">
-                <div className="sm-ba-img-wrap">
-                  <img src={imgBefore} alt={`Before: ${label}`} className="sm-ba-img" loading="lazy" />
-                  <span className="sm-ba-label">Before</span>
+          {implantCases.map((c) => (
+            <div key={c.label} className="sm-ba-card">
+              {c.singleImage ? (
+                <div className="sm-ba-images">
+                  <div className="sm-ba-img-wrap">
+                    <img src={c.singleImage} alt={c.label} className="sm-ba-img" loading="lazy" />
+                  </div>
                 </div>
-                <div className="sm-ba-img-wrap">
-                  <img src={imgAfter} alt={`After: ${label}`} className="sm-ba-img" loading="lazy" />
-                  <span className="sm-ba-label sm-ba-label--after">After</span>
+              ) : (
+                <div className="sm-ba-images">
+                  <div className="sm-ba-img-wrap">
+                    <img src={c.before} alt={`Before: ${c.label}`} className="sm-ba-img" loading="lazy" />
+                    <span className="sm-ba-label">Before</span>
+                  </div>
+                  <div className="sm-ba-img-wrap">
+                    <img src={c.after} alt={`After: ${c.label}`} className="sm-ba-img" loading="lazy" />
+                    <span className="sm-ba-label sm-ba-label--after">After</span>
+                  </div>
                 </div>
-              </div>
+              )}
               <div className="sm-ba-info">
-                <p className="sm-ba-result"><strong>{label}</strong></p>
+                <p className="sm-ba-result"><strong>{c.label}</strong></p>
               </div>
             </div>
           ))}
         </div>
-        {implantReview && (
-          <div className="im-review-wrap">
-            <ReviewCard review={implantReview} />
-          </div>
-        )}
+        <div className="im-review-wrap">
+          <GoogleReviewsCard compact />
+        </div>
       </section>
 
       {/* ── 6. FAQ ───────────────────────────────────────────── */}
@@ -227,7 +227,8 @@ function DentalImplantsPage() {
           <div className="sm-map-details">
             <p className="sm-eyebrow">Visit Astra Dental</p>
             <h2 className="sm-map-title">
-              Proudly serving patients from {implantAreas.join(', ')}.
+              Proudly serving patients from {implantAreas.slice(0, -1).join(', ')}, and across
+              the {implantAreas.at(-1)}.
             </h2>
             <div className="sm-map-info">
               <div className="sm-map-info-item">
@@ -237,9 +238,6 @@ function DentalImplantsPage() {
                 <span>{siteConfig.phone}</span>
               </div>
             </div>
-            <a href={waLink('Hi Astra Dental, I would like to book my implant consultation.')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> Book Your Implant Consultation Today
-            </a>
           </div>
           <div className="sm-map-embed-wrap">
             <iframe

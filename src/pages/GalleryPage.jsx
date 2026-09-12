@@ -72,8 +72,8 @@ function GalleryPage() {
           </motion.article>
 
           <motion.article className="gallery-item" variants={slideRight}>
-            <img src={galleryItems[4].image} alt={galleryItems[4].category} loading="lazy" />
-            <span>{galleryItems[4].category}</span>
+            <img src={galleryItems[1].image} alt={galleryItems[1].category} loading="lazy" />
+            <span>{galleryItems[1].category}</span>
           </motion.article>
         </motion.div>
 
@@ -105,7 +105,7 @@ function GalleryPage() {
         </section>
 
         <section className="inner-page" style={{ paddingTop: '30px' }}>
-          <SectionTitle eyebrow="Clinic Gallery" title="Interior, Equipment" accentTitle="and Team" />
+          <SectionTitle eyebrow="Clinic Gallery" title="Interior &" accentTitle="Equipment" />
           <GalleryGrid items={galleryItems} />
         </section>
       </section>

@@ -13,6 +13,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import Button from './Button'
 import { fadeUp, staggerContainer, staggerFast, scalePop, slideRight } from '../animations/motionVariants'
+import { siteConfig } from '../constants/siteConfig'
 
 function Hero({ data, slides = [] }) {
   return (
@@ -53,10 +54,16 @@ function Hero({ data, slides = [] }) {
             animate="visible"
           >
             {/* Rating badge */}
-            <motion.div className="hero-rating-badge" variants={slideRight}>
+            <motion.a
+              className="hero-rating-badge"
+              variants={slideRight}
+              href={siteConfig.googleReviewsUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="stars">★★★★★</span>
-              <span>4.9 · 500+ Google Reviews</span>
-            </motion.div>
+              <span>Read Our Reviews on Google</span>
+            </motion.a>
 
             {/* Headline */}
             <motion.h1 variants={fadeUp}>
@@ -97,12 +104,26 @@ function Hero({ data, slides = [] }) {
         whileInView="visible"
         viewport={{ once: true, amount: 0.4 }}
       >
-        {data.stats.map((stat) => (
-          <motion.div className="hero-stat" key={stat.label} variants={fadeUp}>
-            <span className="hero-stat-value">{stat.value}</span>
-            <span className="hero-stat-label">{stat.label}</span>
-          </motion.div>
-        ))}
+        {data.stats.map((stat) =>
+          stat.link ? (
+            <motion.a
+              className="hero-stat"
+              key={stat.label}
+              variants={fadeUp}
+              href={stat.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="hero-stat-value">{stat.value}</span>
+              <span className="hero-stat-label">{stat.label}</span>
+            </motion.a>
+          ) : (
+            <motion.div className="hero-stat" key={stat.label} variants={fadeUp}>
+              <span className="hero-stat-value">{stat.value}</span>
+              <span className="hero-stat-label">{stat.label}</span>
+            </motion.div>
+          )
+        )}
       </motion.div>
     </>
   )

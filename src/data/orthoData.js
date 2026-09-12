@@ -9,8 +9,8 @@
 export const orthoTrustBar = [
   'Specialist Orthodontic Care',
   'Multi-Disciplinary Treatment Planning',
-  'Digital 3D Smile Simulation',
-  'Transparent Pricing & EMI Options',
+  'Metal, Ceramic & Clear Aligner Options',
+  'Retention Plan Included',
 ]
 
 export const orthoCandidateSigns = [

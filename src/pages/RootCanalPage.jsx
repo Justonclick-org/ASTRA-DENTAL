@@ -98,10 +98,15 @@ function RootCanalPage() {
               <span className="sm-stat-value">Same-Day</span>
               <span className="sm-stat-label">Emergency Slots</span>
             </div>
-            <div className="sm-stat-card sm-stat-card--gold">
-              <span className="sm-stat-value">★ 4.9</span>
-              <span className="sm-stat-label">Google Rating</span>
-            </div>
+            <a
+              href={siteConfig.googleReviewsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="sm-stat-card sm-stat-card--gold"
+            >
+              <span className="sm-stat-value">★★★★★</span>
+              <span className="sm-stat-label">Read Our Reviews</span>
+            </a>
           </div>
         </div>
       </section>
@@ -132,9 +137,6 @@ function RootCanalPage() {
             <p className="rc-signs-note">
               Early diagnosis often improves the chances of saving the tooth.
             </p>
-            <a href={waLink('Hi Astra Dental, I have some of these symptoms and want a root canal evaluation.')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> Describe Your Symptoms on WhatsApp
-            </a>
           </div>
           <ul className="rc-signs-list">
             {rcSigns.map((sign) => (
@@ -258,9 +260,6 @@ function RootCanalPage() {
                 <span>Mon – Sat: 10 AM – 9 PM &nbsp;|&nbsp; Sunday: By Appointment</span>
               </div>
             </div>
-            <a href={waLink('Hi Astra Dental, I want directions to your clinic in Chembur.')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> WhatsApp for Directions
-            </a>
           </div>
           <div className="sm-map-embed-wrap">
             <iframe

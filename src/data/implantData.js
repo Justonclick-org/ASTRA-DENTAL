@@ -6,10 +6,15 @@
  * Contact: justonclick@2026
  */
 
+import fullMouthBefore from '../assets/images/case-missing-before.jpg'
+import restoredAfter from '../assets/images/case-missing-after.jpg'
+import anteriorBefore from '../assets/images/case-anterior-before.jpg'
+import zygomaticXray from '../assets/images/zygomatic-xray.jpg'
+
 export const implantTrustBar = [
-  '7+ Years Implantology Expertise',
-  'Advanced 3D CBCT & Navigation Tech',
-  'Premium FDA-Approved Implants',
+  'MDS — Periodontology & Implantology',
+  'Guinness World Record Holder',
+  'Bone Grafting & Zygomatic Implant Specialist',
   '100% Ethical, Transparent Pricing',
 ]
 
@@ -45,10 +50,21 @@ export const implantSolutions = [
 
 export const implantBrands = ['Straumann', 'Nobel Biocare', 'Osstem', 'Dentium']
 
-export const implantCaseLabels = [
-  'Full Mouth Rehabilitation with All-on-6 Implants',
-  'Single Anterior Implant',
-  'Zygomatic Implant — Severe Bone Loss Case',
+export const implantCases = [
+  {
+    label: 'Full Mouth Rehabilitation with All-on-6 Implants',
+    before: fullMouthBefore,
+    after: restoredAfter,
+  },
+  {
+    label: 'Single Anterior Implant',
+    before: anteriorBefore,
+    after: restoredAfter,
+  },
+  {
+    label: 'Zygomatic Implant — Severe Bone Loss Case',
+    singleImage: zygomaticXray,
+  },
 ]
 
 export const implantAreas = ['Chembur', 'Tilak Nagar', 'Ghatkopar', 'Mumbai Metropolitan Region']

@@ -10,10 +10,9 @@ import { useState } from 'react'
 import { FaWhatsapp, FaPhone, FaCheckCircle } from 'react-icons/fa'
 import SEOComponent from '../components/SEOComponent'
 import FaqAccordion from '../components/FaqAccordion'
-import ReviewCard from '../components/ReviewCard'
+import GoogleReviewsCard from '../components/GoogleReviewsCard'
 import { siteConfig } from '../constants/siteConfig'
 import { buildFaqSchema } from '../services/schemaService'
-import { testimonials } from '../data/testimonialData'
 import {
   orthoTrustBar, orthoCandidateSigns, orthoDoctors, orthoPatientMeans,
   orthoCaseFilters, orthoCases, orthoTreatmentTypes, orthoBudgetExpect,
@@ -56,8 +55,6 @@ function OrthoCases() {
 }
 
 function OrthoPage() {
-  const bracesReview = testimonials.find((t) => t.treatment === 'Braces')
-
   return (
     <>
       <SEOComponent
@@ -86,7 +83,7 @@ function OrthoPage() {
               using advanced digital technology and specialist care for predictable, confident
               outcomes.
             </p>
-            <div className="sm-hero-actions">
+            <div className="sm-hero-actions or-hero-actions">
               <a href={waLink('Hi Astra Dental, I want to claim my free 3D Smile Simulation.')} target="_blank" rel="noreferrer" className="sm-btn-wa sm-btn-wa--lg">
                 <FaWhatsapp /> Claim Free 3D Smile Simulation
               </a>
@@ -113,10 +110,15 @@ function OrthoPage() {
               <span className="sm-stat-value">EMI</span>
               <span className="sm-stat-label">Flexible Payment Options</span>
             </div>
-            <div className="sm-stat-card sm-stat-card--gold">
-              <span className="sm-stat-value">★ 4.9</span>
-              <span className="sm-stat-label">Google Rating</span>
-            </div>
+            <a
+              href={siteConfig.googleReviewsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="sm-stat-card sm-stat-card--gold"
+            >
+              <span className="sm-stat-value">★★★★★</span>
+              <span className="sm-stat-label">Read Our Reviews</span>
+            </a>
           </div>
         </div>
       </section>
@@ -131,9 +133,6 @@ function OrthoPage() {
               If any of these sound familiar, modern orthodontic treatment may help improve
               both your smile and long-term oral health.
             </p>
-            <a href={waLink('Hi Astra Dental, I want to book a Digital Smile Assessment.')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> Book a Digital Smile Assessment
-            </a>
           </div>
           <ul className="rc-signs-list">
             {orthoCandidateSigns.map((sign) => (
@@ -192,11 +191,9 @@ function OrthoPage() {
             </p>
           </div>
           <OrthoCases />
-          {bracesReview && (
-            <div className="im-review-wrap">
-              <ReviewCard review={bracesReview} />
-            </div>
-          )}
+          <div className="im-review-wrap">
+            <GoogleReviewsCard compact />
+          </div>
         </div>
       </section>
 
@@ -238,9 +235,6 @@ function OrthoPage() {
               We believe patients should fully understand their treatment options before making
               a decision.
             </p>
-            <a href={waLink('Hi Astra Dental, I want to check EMI options for braces/aligners.')} target="_blank" rel="noreferrer" className="sm-btn-wa">
-              <FaWhatsapp /> Check EMI Options
-            </a>
           </div>
           <div>
             <h3 className="rc-retreat-signs-title">What To Expect</h3>
@@ -302,11 +296,8 @@ function OrthoPage() {
             option for your smile goals.
           </p>
           <div className="or-final-cta-actions">
-            <a href={waLink('Hi Astra Dental, I want to claim my free 3D Smile Simulation.')} target="_blank" rel="noreferrer" className="rc-final-cta-btn">
-              <FaWhatsapp /> Claim Free 3D Smile Simulation
-            </a>
-            <a href={telLink} className="rc-final-cta-btn rc-final-cta-btn--ghost">
-              <FaPhone /> Call Now
+            <a href={waLink('Hi Astra Dental, I would like to book a consultation for braces / clear aligners.')} target="_blank" rel="noreferrer" className="rc-final-cta-btn">
+              <FaWhatsapp /> Book Your Consultation
             </a>
           </div>
           <div className="or-footer-trust">
@@ -314,6 +305,7 @@ function OrthoPage() {
             <span>Specialist Orthodontist</span>
             <span>World Record Holder-Led Clinic</span>
             <span>Digital Smile Planning</span>
+            <span>Serving Chembur, Tilak Nagar, Ghatkopar &amp; Mumbai</span>
           </div>
         </div>
       </section>

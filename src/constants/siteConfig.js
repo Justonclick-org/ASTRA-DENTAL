@@ -34,11 +34,12 @@ export const siteConfig = {
     'Sunday: By Appointment Only',
   ],
   registrationNumber: 'Reg. No. A-47594',
+  googleReviewsUrl: 'https://share.google/0uxxvXTn1kpOgbmes',
   whatsappBookingUrl: 'https://wa.me/919860532742?text=Hello%20Astra%20Dental%20Clinic!%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20the%20available%20slots.',
   // Step 1: go to forms.google.com → create form → Share button → Copy link → paste here
   googleFormUrl: '',
   // Step 2 (optional): Send → Embed icon → copy the src="..." URL → paste here for embedded form
   googleFormEmbedUrl: '',
   canonicalBaseUrl: 'https://www.astradentalclinic.com',
-  logo: '/logo.svg',
+  logo: '/logo-full.png',
 }

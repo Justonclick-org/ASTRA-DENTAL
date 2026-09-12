@@ -6,17 +6,19 @@
  * Contact: justonclick@2026
  */
 
-import treatmentRoomImg from '../assets/images/IMG_1886.JPG.jpeg'
 import bracesImg from '../assets/images/IMG_1862.PNG'
-import smileResultImg from '../assets/images/IMG_1860.PNG'
 import smileBWImg from '../assets/images/IMG_1861.PNG'
-import clinicLoungeImg from '../assets/images/IMG_1775.JPG.jpeg'
+import implantModelImg from '../assets/images/treatment-implant.jpg'
+import rootCanalModelImg from '../assets/images/treatment-rootcanal.jpg'
+import whiteningImg from '../assets/images/treatment-whitening.jpg'
+import veneersImg from '../assets/images/treatment-veneers.jpg'
+import pediatricImg from '../assets/images/treatment-pediatric.jpg'
 
 export const treatments = [
   {
     slug: 'dental-implants',
     title: 'Dental Implants',
-    image: treatmentRoomImg,
+    image: implantModelImg,
     shortDescription: 'Permanent replacement for missing teeth with natural look, feel, and bite strength.',
     highlights: [
       { stat: '60–90 min', label: 'Procedure Time' },
@@ -47,7 +49,7 @@ export const treatments = [
   {
     slug: 'root-canal-treatment',
     title: 'Root Canal Treatment',
-    image: treatmentRoomImg,
+    image: rootCanalModelImg,
     shortDescription: 'Save an infected or badly damaged tooth with painless, precision endodontic care.',
     highlights: [
       { stat: '45–90 min', label: 'Per Session' },
@@ -109,7 +111,7 @@ export const treatments = [
   {
     slug: 'teeth-whitening',
     title: 'Teeth Whitening',
-    image: smileResultImg,
+    image: whiteningImg,
     shortDescription: 'Professional stain removal and brightening for a confident, radiant smile.',
     highlights: [
       { stat: '60–90 min', label: 'In-chair Session' },
@@ -140,7 +142,7 @@ export const treatments = [
   {
     slug: 'smile-makeover',
     title: 'Smile Makeover',
-    image: smileResultImg,
+    image: veneersImg,
     shortDescription: 'Comprehensive aesthetic planning to craft your most confident, balanced smile.',
     highlights: [
       { stat: 'Custom', label: 'Digital Design' },
@@ -171,7 +173,7 @@ export const treatments = [
   {
     slug: 'pediatric-dentistry',
     title: 'Pediatric Dentistry',
-    image: clinicLoungeImg,
+    image: pediatricImg,
     shortDescription: 'Gentle, fun, and preventive dental care designed especially for children.',
     highlights: [
       { stat: 'Age 1+', label: 'First Visit' },

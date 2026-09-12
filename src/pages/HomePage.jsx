@@ -11,12 +11,10 @@ import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaClock, FaCheckCircle, FaPlay } f
 import SEOComponent from '../components/SEOComponent'
 import Hero from '../components/Hero'
 import SectionTitle from '../components/SectionTitle'
-import ReviewCard from '../components/ReviewCard'
 import FaqAccordion from '../components/FaqAccordion'
 import CTASection from '../components/CTASection'
 import { heroSlides } from '../data/heroMedia'
-import { testimonials } from '../data/testimonialData'
-import { galleryItems } from '../data/galleryData'
+import GoogleReviewsCard from '../components/GoogleReviewsCard'
 import {
   heroData, whyChooseData, whyChooseIntro,
   smileConditions, treatmentFeatures, problemsWeSolve,
@@ -27,9 +25,6 @@ import { siteConfig } from '../constants/siteConfig'
 import drAmitPhoto from '../assets/images/dr.amit.PNG'
 
 function HomePage() {
-  const imgBefore = galleryItems[1]?.image
-  const imgAfter  = galleryItems[0]?.image
-
   return (
     <>
       <SEOComponent
@@ -145,11 +140,11 @@ function HomePage() {
             <div key={c.problem} className="card hp-ba-card">
               <div className="hp-ba-images">
                 <div className="hp-ba-img-wrap">
-                  <img src={imgBefore} alt="Before" className="hp-ba-img" />
+                  <img src={c.before} alt={`Before: ${c.problem}`} className="hp-ba-img" loading="lazy" />
                   <span className="hp-ba-label">Before</span>
                 </div>
                 <div className="hp-ba-img-wrap">
-                  <img src={imgAfter} alt="After" className="hp-ba-img" />
+                  <img src={c.after} alt={`After: ${c.treatment}`} className="hp-ba-img" loading="lazy" />
                   <span className="hp-ba-label hp-ba-label--after">After</span>
                 </div>
               </div>
@@ -168,9 +163,7 @@ function HomePage() {
         <div className="hp-tv-left">
           <SectionTitle eyebrow="What Our Patients Say" title="Patient" accentTitle="Testimonials" />
           <div className="hp-tv-cards">
-            {testimonials.slice(0, 3).map((r) => (
-              <ReviewCard key={r.name} review={r} />
-            ))}
+            <GoogleReviewsCard />
           </div>
         </div>
         <div className="hp-tv-right card">

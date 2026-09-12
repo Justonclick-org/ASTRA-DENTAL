@@ -9,7 +9,7 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { siteConfig } from '../constants/siteConfig'
-import toothLogo from '../assets/tooth-logo.svg'
+import astraLogo from '../assets/logo-horizontal.png'
 
 function Footer() {
   return (
@@ -19,13 +19,7 @@ function Footer() {
         {/* ── Brand ── */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="footer-logo-icon-wrap">
-              <img src={toothLogo} alt="Astra Dental" className="footer-logo-icon" />
-            </span>
-            <div className="footer-logo-text">
-              <span className="footer-logo-astra">ASTRA DENTAL</span>
-              <span className="footer-logo-clinic">CLINIC</span>
-            </div>
+            <img src={astraLogo} alt="Astra Dental" className="footer-logo-image" />
           </div>
           <p className="footer-tagline">
             Perio-plastic, Laser, Implant &amp; Orthodontic Centre.

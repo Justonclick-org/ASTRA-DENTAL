@@ -31,12 +31,6 @@ export function buildLocalBusinessSchema() {
       latitude: '19.0611',
       longitude: '72.8997',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-    },
     employee: {
       '@type': 'Person',
       name: 'Dr. Amit Rajabhau Pawar',
@@ -73,6 +67,7 @@ export function buildLocalBusinessSchema() {
       siteConfig.socialLinks.instagram,
       siteConfig.socialLinks.facebook,
       siteConfig.socialLinks.youtube,
+      siteConfig.googleReviewsUrl,
     ],
   }
 }
@@ -113,7 +108,7 @@ export function buildArticleSchema(post) {
       url: siteConfig.canonicalBaseUrl,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.canonicalBaseUrl}/logo.svg`,
+        url: `${siteConfig.canonicalBaseUrl}${siteConfig.logo}`,
       },
     },
     mainEntityOfPage: {

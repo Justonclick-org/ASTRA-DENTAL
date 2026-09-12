@@ -8,12 +8,14 @@
 
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import { useBooking } from '../context/BookingContext'
-import toothLogo from '../assets/tooth-logo.svg'
+import { problemsWeSolve } from '../data/homeData'
+import astraLogo from '../assets/logo-horizontal.png'
 
 const navItems = [
   { label: 'Home',         path: '/' },
+  { label: 'Problems We Solve', dropdown: problemsWeSolve },
   { label: 'About',        path: '/about' },
   { label: 'Treatments',   path: '/treatments' },
   { label: 'Gallery',      path: '/gallery' },
@@ -26,6 +28,7 @@ const navItems = [
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
   const { openBooking } = useBooking()
 
   useEffect(() => {
@@ -44,21 +47,42 @@ function Navbar() {
       <div className="emergency-bar">Emergency Consultation: +91 98605 32742</div>
       <div className="container nav-wrap">
         <Link to="/" className="logo">
-          <span className="logo-icon-wrap">
-            <img src={toothLogo} alt="Astra Dental" className="logo-icon" />
-          </span>
-          <span className="logo-name">
-            <span className="logo-astra">ASTRA</span>
-            <span className="logo-dental">DENTAL</span>
-          </span>
+          <img src={astraLogo} alt="Astra Dental" className="logo-image" />
         </Link>
 
         <nav className={`nav-links ${isOpen ? 'open' : ''}`} aria-label="Main">
-          {navItems.map((item) => (
-            <NavLink key={item.path} to={item.path} onClick={() => setIsOpen(false)}>
-              {item.label}
-            </NavLink>
-          ))}
+          {navItems.map((item) =>
+            item.dropdown ? (
+              <div
+                key={item.label}
+                className={`nav-dropdown${mobileDropdownOpen ? ' nav-dropdown--open' : ''}`}
+              >
+                <button
+                  type="button"
+                  className="nav-dropdown-toggle"
+                  onClick={() => setMobileDropdownOpen((prev) => !prev)}
+                  aria-expanded={mobileDropdownOpen}
+                >
+                  {item.label} <FaChevronDown className="nav-dropdown-chevron" />
+                </button>
+                <div className="nav-dropdown-menu">
+                  {item.dropdown.map((sub) => (
+                    <Link
+                      key={sub.problem}
+                      to={sub.link}
+                      onClick={() => { setIsOpen(false); setMobileDropdownOpen(false) }}
+                    >
+                      {sub.problem}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <NavLink key={item.path} to={item.path} onClick={() => setIsOpen(false)}>
+                {item.label}
+              </NavLink>
+            )
+          )}
           <button type="button" className="btn btn-primary nav-book-btn" onClick={handleBook}>
             Book Appointment
           </button>

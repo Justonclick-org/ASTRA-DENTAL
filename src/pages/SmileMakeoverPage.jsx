@@ -11,7 +11,11 @@ import { FaWhatsapp, FaPhone, FaCheckCircle, FaChevronDown, FaMapMarkerAlt, FaCl
 import SEOComponent from '../components/SEOComponent'
 import { siteConfig } from '../constants/siteConfig'
 import drAmitPhoto from '../assets/images/dr.amit.PNG'
-import { galleryItems } from '../data/galleryData'
+import gummyPhoto from '../assets/images/case-gummy.jpg'
+import crookedBefore from '../assets/images/case-crooked-before.jpg'
+import crookedAfter from '../assets/images/case-crooked-after.jpg'
+import wornBefore from '../assets/images/case-worn-before.jpg'
+import wornAfter from '../assets/images/case-worn-after.jpg'
 
 /* ── Condition data ────────────────────────────────────────── */
 const CONDITIONS = [
@@ -67,15 +71,14 @@ const CONDITIONS = [
 
 /* ── Before / After cases ──────────────────────────────────── */
 const BA_CASES = [
-  { problem: 'Gummy Smile + Uneven Gum Line', treatment: 'Laser Gum Contouring + Veneers', result: 'Balanced & Radiant Smile' },
-  { problem: 'Gaps & Crooked Teeth',           treatment: 'Smile Design & Porcelain Veneers', result: 'Perfectly Proportioned Smile' },
-  { problem: 'Dark & Worn Teeth',              treatment: 'Full Smile Makeover',              result: 'Bright, Youthful Smile' },
-  { problem: 'Broken Front Teeth',             treatment: 'Composite + Porcelain Veneers',    result: 'Natural & Seamless Smile' },
+  { problem: 'Gummy Smile + Uneven Gum Line', treatment: 'Laser Gum Contouring + Veneers', result: 'Balanced & Radiant Smile', before: gummyPhoto, after: gummyPhoto },
+  { problem: 'Gaps & Crooked Teeth',           treatment: 'Smile Design & Porcelain Veneers', result: 'Perfectly Proportioned Smile', before: crookedBefore, after: crookedAfter },
+  { problem: 'Dark & Worn Teeth',              treatment: 'Full Smile Makeover',              result: 'Bright, Youthful Smile', before: wornBefore, after: wornAfter },
 ]
 
 /* ── Doctor credentials ────────────────────────────────────── */
 const DR_POINTS = [
-  'Guinness World Record Holder in Implant Dentistry',
+  'Guinness World Record Holder — Most Gum (Periodontal) Surgeries Performed',
   'MDS — Periodontology & Implantology (SDC Chennai)',
   'Specialist in Advanced Cosmetic Dentistry & Smile Makeovers',
   'Digital Smile Design (DSD) Certified Practitioner',
@@ -295,9 +298,6 @@ function SmileLeadForm() {
 
 /* ── Main Page ─────────────────────────────────────────────── */
 function SmileMakeoverPage() {
-  const imgBefore = galleryItems[1]?.image
-  const imgAfter  = galleryItems[0]?.image
-
   return (
     <>
       <SEOComponent
@@ -319,6 +319,7 @@ function SmileMakeoverPage() {
               Stop Hiding Behind<br />
               <em className="sm-hero-accent">a Closed-Lip Smile.</em>
             </h1>
+            <h2 className="sm-hero-h2">SMILE DESIGN &amp; RECONSTRUCTIVE MAKEOVERS — CHEMBUR, MUMBAI</h2>
             <p className="sm-hero-sub">
               Advanced Smile Design &amp; Makeover by Dr. Amit Pawar — Guinness World Record Holder.
               Gummy smile, crooked teeth, gaps, dark teeth, veneers — one expert, one clinic, one plan.
@@ -338,8 +339,7 @@ function SmileMakeoverPage() {
             </div>
             <div className="sm-hero-trust">
               <div className="sm-trust-item"><FaCheckCircle /> Guinness World Record Holder</div>
-              <div className="sm-trust-item"><FaCheckCircle /> 5000+ Smile Transformations</div>
-              <div className="sm-trust-item"><FaCheckCircle /> 15+ Years Experience</div>
+              <div className="sm-trust-item"><FaCheckCircle /> MDS — Periodontology &amp; Implantology</div>
               <div className="sm-trust-item"><FaCheckCircle /> Digital Smile Design (DSD) Certified</div>
             </div>
           </div>
@@ -356,10 +356,15 @@ function SmileMakeoverPage() {
               <span className="sm-stat-value">15+</span>
               <span className="sm-stat-label">Years of Expertise</span>
             </div>
-            <div className="sm-stat-card sm-stat-card--gold">
-              <span className="sm-stat-value">★ 4.9</span>
-              <span className="sm-stat-label">Google Rating</span>
-            </div>
+            <a
+              href={siteConfig.googleReviewsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="sm-stat-card sm-stat-card--gold"
+            >
+              <span className="sm-stat-value">★★★★★</span>
+              <span className="sm-stat-label">Read Our Reviews</span>
+            </a>
           </div>
         </div>
       </section>
@@ -409,11 +414,11 @@ function SmileMakeoverPage() {
             <div key={c.problem} className="sm-ba-card">
               <div className="sm-ba-images">
                 <div className="sm-ba-img-wrap">
-                  <img src={imgBefore} alt={`Before: ${c.problem}`} className="sm-ba-img" loading="lazy" />
+                  <img src={c.before} alt={`Before: ${c.problem}`} className="sm-ba-img" loading="lazy" />
                   <span className="sm-ba-label">Before</span>
                 </div>
                 <div className="sm-ba-img-wrap">
-                  <img src={imgAfter} alt={`After: ${c.treatment}`} className="sm-ba-img" loading="lazy" />
+                  <img src={c.after} alt={`After: ${c.treatment}`} className="sm-ba-img" loading="lazy" />
                   <span className="sm-ba-label sm-ba-label--after">After</span>
                 </div>
               </div>
@@ -424,16 +429,6 @@ function SmileMakeoverPage() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="sm-ba-cta">
-          <a
-            href={`https://wa.me/919860532742?text=${encodeURIComponent('Hi Astra Dental, I would like to see more smile transformation cases.')}`}
-            target="_blank"
-            rel="noreferrer"
-            className="sm-btn-wa"
-          >
-            <FaWhatsapp /> See More Transformations on WhatsApp
-          </a>
         </div>
       </section>
 
@@ -472,6 +467,11 @@ function SmileMakeoverPage() {
           <p className="eyebrow">About Your Doctor</p>
           <h2 className="sm-about-name">Dr. Amit Rajabhau Pawar</h2>
           <p className="sm-about-qual">BDS (GDC Mumbai) · MDS (SDC Chennai) · Periodontology &amp; Implantology</p>
+          <p className="sm-about-award">
+            <strong>Guinness World Record Holder</strong> — awarded for performing the highest
+            number of gum (periodontal) surgeries, establishing unparalleled precision in gum
+            aesthetics and smile design.
+          </p>
           <ul className="sm-about-points">
             {DR_POINTS.map((pt) => (
               <li key={pt}>
@@ -511,14 +511,6 @@ function SmileMakeoverPage() {
                 <span>Mon – Sat: 10 AM – 9 PM &nbsp;|&nbsp; Sunday: By Appointment</span>
               </div>
             </div>
-            <a
-              href={`https://wa.me/919860532742?text=${encodeURIComponent('Hi Astra Dental, I want directions to your clinic in Chembur.')}`}
-              target="_blank"
-              rel="noreferrer"
-              className="sm-btn-wa"
-            >
-              <FaWhatsapp /> WhatsApp for Directions
-            </a>
           </div>
           <div className="sm-map-embed-wrap">
             <iframe
@@ -546,17 +538,6 @@ function SmileMakeoverPage() {
         <div className="sm-faq-cols">
           <SmileFaq items={FAQS.slice(0, 10)} />
           <SmileFaq items={FAQS.slice(10)} />
-        </div>
-        <div className="sm-faq-cta">
-          <p>Still have a question? Dr. Amit Pawar's team is on WhatsApp.</p>
-          <a
-            href={`https://wa.me/919860532742?text=${encodeURIComponent('Hi Astra Dental, I have a question about Smile Design.')}`}
-            target="_blank"
-            rel="noreferrer"
-            className="sm-btn-wa"
-          >
-            <FaWhatsapp /> Ask on WhatsApp
-          </a>
         </div>
       </section>
     </>

@@ -6,6 +6,14 @@
  * Contact: justonclick@2026
  */
 
+import gapBefore from '../assets/images/case-gap-before.jpg'
+import gapAfter from '../assets/images/case-gap-after.jpg'
+import stainedBefore from '../assets/images/case-stained-before.jpg'
+import stainedAfter from '../assets/images/case-stained-after.jpg'
+import missingBefore from '../assets/images/case-missing-before.jpg'
+import missingAfter from '../assets/images/case-missing-after.jpg'
+import { siteConfig } from '../constants/siteConfig'
+
 export const heroData = {
   title: 'Design The Smile',
   titleAccent: "You've Always Wanted",
@@ -16,7 +24,7 @@ export const heroData = {
     { label: 'Happy Patients', value: '5000+' },
     { label: 'Years Experience', value: '15+' },
     { label: 'Satisfaction Rate', value: '98%' },
-    { label: 'Star Rating', value: '4.9' },
+    { label: 'On Google', value: '★★★★★', link: siteConfig.googleReviewsUrl },
   ],
 }
 
@@ -42,7 +50,7 @@ export const whyChooseData = [
   {
     icon: '🏆',
     title: 'World Record Holder',
-    desc: 'Internationally recognized for excellence in Implant Dentistry.',
+    desc: 'Guinness World Record for performing the highest number of gum (periodontal) surgeries.',
   },
   {
     icon: '🦷',
@@ -110,15 +118,14 @@ export const treatmentFeatures = [
 ]
 
 export const beforeAfterCases = [
-  { problem: 'Gaps & Uneven Teeth',   treatment: 'Smile Design & Veneers', result: 'Perfectly Aligned & Natural Smile' },
-  { problem: 'Stained & Yellow Teeth', treatment: 'Whitening & Veneers',    result: 'Bright & Confident Smile' },
-  { problem: 'Broken Front Teeth',    treatment: 'Veneers',                 result: 'Natural & Beautiful Smile' },
-  { problem: 'Missing Teeth',         treatment: 'Dental Implants',         result: 'Strong & Natural Replacement' },
+  { problem: 'Gaps & Uneven Teeth',    treatment: 'Smile Design & Veneers', result: 'Perfectly Aligned & Natural Smile', before: gapBefore, after: gapAfter },
+  { problem: 'Stained & Yellow Teeth', treatment: 'Whitening & Veneers',    result: 'Bright & Confident Smile',          before: stainedBefore, after: stainedAfter },
+  { problem: 'Missing Tooth',          treatment: 'Dental Implants',        result: 'Strong & Natural Replacement',      before: missingBefore, after: missingAfter },
 ]
 
 export const aboutDoctorPoints = [
   'Smile Design Expert',
-  'World Record Holder in Implant Dentistry',
+  'Guinness World Record Holder — Most Gum (Periodontal) Surgeries Performed',
   'Specialist in Advanced Cosmetic Dentistry & Smile Makeovers',
   'Thousands of Successful Smile Transformations',
   'Passionate About Precision, Aesthetics & Patient Comfort',
