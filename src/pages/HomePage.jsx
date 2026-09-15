@@ -29,7 +29,7 @@ function HomePage() {
     <>
       <SEOComponent
         title="Astra Dental Clinic Chembur | Dr. Amit Pawar MDS | Best Dentist in Mumbai"
-        description="Astra Dental Clinic in Chembur Mumbai — led by Dr. Amit Pawar, Smile Design Expert & World Record Holder. Dental implants, veneers, teeth whitening, smile makeover. Call +91 98605 32742."
+        description="Astra Dental Clinic in Chembur Mumbai — led by Dr. Amit Pawar, Smile Design Expert & World Record Holder. Dental implants, veneers, teeth whitening, smile makeover. Call +91 91377 52536."
         keywords="best dentist Chembur, dental clinic Chembur Mumbai, Dr Amit Pawar, Astra Dental, smile design Chembur, dental implants Chembur, root canal Chembur, teeth whitening Mumbai, veneers Chembur"
         path="/"
         schema={[buildLocalBusinessSchema(), buildFaqSchema(homeFaqs)]}
@@ -149,9 +149,7 @@ function HomePage() {
                 </div>
               </div>
               <div className="hp-ba-info">
-                <p><strong>Problem:</strong> {c.problem}</p>
-                <p><strong>Treatment:</strong> {c.treatment}</p>
-                <p><strong>Result:</strong> {c.result}</p>
+                <p className="hp-ba-name">{c.problem}</p>
               </div>
             </div>
           ))}

@@ -6,12 +6,12 @@
  * Contact: justonclick@2026
  */
 
-import gapBefore from '../assets/images/case-gap-before.jpg'
-import gapAfter from '../assets/images/case-gap-after.jpg'
-import stainedBefore from '../assets/images/case-stained-before.jpg'
-import stainedAfter from '../assets/images/case-stained-after.jpg'
-import missingBefore from '../assets/images/case-missing-before.jpg'
-import missingAfter from '../assets/images/case-missing-after.jpg'
+import gapBefore from '../assets/images/case-gaps-uneven-before.jpg'
+import gapAfter from '../assets/images/case-gaps-uneven-after.jpg'
+import stainedBefore from '../assets/images/case-stained2-before.jpg'
+import stainedAfter from '../assets/images/case-stained2-after.jpg'
+import missingBefore from '../assets/images/case-missing2-before.jpg'
+import missingAfter from '../assets/images/case-missing2-after.jpg'
 import { siteConfig } from '../constants/siteConfig'
 
 export const heroData = {

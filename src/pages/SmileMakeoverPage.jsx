@@ -11,11 +11,12 @@ import { FaWhatsapp, FaPhone, FaCheckCircle, FaChevronDown, FaMapMarkerAlt, FaCl
 import SEOComponent from '../components/SEOComponent'
 import { siteConfig } from '../constants/siteConfig'
 import drAmitPhoto from '../assets/images/dr.amit.PNG'
-import gummyPhoto from '../assets/images/case-gummy.jpg'
-import crookedBefore from '../assets/images/case-crooked-before.jpg'
-import crookedAfter from '../assets/images/case-crooked-after.jpg'
-import wornBefore from '../assets/images/case-worn-before.jpg'
-import wornAfter from '../assets/images/case-worn-after.jpg'
+import gummyBefore from '../assets/images/case-gummy2-before.jpg'
+import gummyAfter from '../assets/images/case-gummy2-after.jpg'
+import crookedBefore from '../assets/images/case-gaps-crooked-before.jpg'
+import crookedAfter from '../assets/images/case-gaps-crooked-after.jpg'
+import wornBefore from '../assets/images/case-dark-worn-before.jpg'
+import wornAfter from '../assets/images/case-dark-worn-after.jpg'
 
 /* ── Condition data ────────────────────────────────────────── */
 const CONDITIONS = [
@@ -71,7 +72,7 @@ const CONDITIONS = [
 
 /* ── Before / After cases ──────────────────────────────────── */
 const BA_CASES = [
-  { problem: 'Gummy Smile + Uneven Gum Line', treatment: 'Laser Gum Contouring + Veneers', result: 'Balanced & Radiant Smile', before: gummyPhoto, after: gummyPhoto },
+  { problem: 'Gummy Smile + Uneven Gum Line', treatment: 'Laser Gum Contouring + Veneers', result: 'Balanced & Radiant Smile', before: gummyBefore, after: gummyAfter },
   { problem: 'Gaps & Crooked Teeth',           treatment: 'Smile Design & Porcelain Veneers', result: 'Perfectly Proportioned Smile', before: crookedBefore, after: crookedAfter },
   { problem: 'Dark & Worn Teeth',              treatment: 'Full Smile Makeover',              result: 'Bright, Youthful Smile', before: wornBefore, after: wornAfter },
 ]
@@ -167,7 +168,7 @@ const FAQS = [
   },
   {
     q: "What's the first step? How do I book a Smile Design consultation?",
-    a: "WhatsApp Dr. Amit Pawar's team directly at +91 98605 32742 with a brief description of your concern (and photos, if you are comfortable). You will receive a response within 2 hours. Alternatively, call the clinic or submit the inquiry form on this page. The first consultation includes a clinical examination and a digital simulation walkthrough.",
+    a: "WhatsApp Dr. Amit Pawar's team directly at +91 91377 52536 with a brief description of your concern (and photos, if you are comfortable). You will receive a response within 2 hours. Alternatively, call the clinic or submit the inquiry form on this page. The first consultation includes a clinical examination and a digital simulation walkthrough.",
   },
 ]
 
@@ -239,7 +240,7 @@ function SmileLeadForm() {
         <h3>Thanks, {fields.name.split(' ')[0]}!</h3>
         <p>Dr. Amit Pawar's team will call you within 4 hours. Your photos are safe — send them securely on WhatsApp.</p>
         <a
-          href={`https://wa.me/919860532742?text=${waMsg}`}
+          href={`https://wa.me/919137752536?text=${waMsg}`}
           target="_blank"
           rel="noreferrer"
           className="sm-btn-wa"
@@ -326,7 +327,7 @@ function SmileMakeoverPage() {
             </p>
             <div className="sm-hero-actions">
               <a
-                href={`https://wa.me/919860532742?text=${encodeURIComponent('Hi Astra Dental, I want a free Smile Design analysis.')}`}
+                href={`https://wa.me/919137752536?text=${encodeURIComponent('Hi Astra Dental, I want a free Smile Design analysis.')}`}
                 target="_blank"
                 rel="noreferrer"
                 className="sm-btn-wa sm-btn-wa--lg"
@@ -386,7 +387,7 @@ function SmileMakeoverPage() {
             {CONDITIONS.map((c) => (
               <a
                 key={c.id}
-                href={`https://wa.me/919860532742?text=${encodeURIComponent(c.waText)}`}
+                href={`https://wa.me/919137752536?text=${encodeURIComponent(c.waText)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="sm-cond-card"
@@ -481,7 +482,7 @@ function SmileMakeoverPage() {
             ))}
           </ul>
           <a
-            href={`https://wa.me/919860532742?text=${encodeURIComponent('Hi Dr. Amit Pawar, I would like to book a Smile Design consultation.')}`}
+            href={`https://wa.me/919137752536?text=${encodeURIComponent('Hi Dr. Amit Pawar, I would like to book a Smile Design consultation.')}`}
             target="_blank"
             rel="noreferrer"
             className="sm-btn-wa"

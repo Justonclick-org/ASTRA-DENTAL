@@ -16,7 +16,7 @@ function AppointmentPage() {
     <>
       <SEOComponent
         title="Book Dental Appointment in Chembur | Astra Dental Clinic | Dr. Amit Pawar"
-        description="Book a dental appointment with Dr. Amit Pawar at Astra Dental Clinic, Chembur Mumbai. Call +91 98605 32742 or WhatsApp for implants, root canal, braces, whitening and more."
+        description="Book a dental appointment with Dr. Amit Pawar at Astra Dental Clinic, Chembur Mumbai. Call +91 91377 52536 or WhatsApp for implants, root canal, braces, whitening and more."
         keywords="book dentist appointment Chembur, dental appointment Mumbai, Dr Amit Pawar appointment, Astra Dental Clinic booking, dental consultation Chembur"
         path="/book-appointment"
       />

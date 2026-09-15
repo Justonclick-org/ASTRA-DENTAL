@@ -88,7 +88,7 @@ function Hero({ data, slides = [] }) {
             {/* CTAs */}
             <motion.div className="hero-actions" variants={fadeUp}>
               <Button to="/book-appointment">Book Appointment</Button>
-              <Button href={`https://wa.me/919860532742`} variant="ghost">
+              <Button href={`https://wa.me/919137752536`} variant="ghost">
                 WhatsApp Consultation
               </Button>
             </motion.div>

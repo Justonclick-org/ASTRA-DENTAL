@@ -17,7 +17,7 @@ import {
   implantBrands, implantCases, implantAreas, implantFaqs,
 } from '../data/implantData'
 
-const waLink = (text) => `https://wa.me/919860532742?text=${encodeURIComponent(text)}`
+const waLink = (text) => `https://wa.me/919137752536?text=${encodeURIComponent(text)}`
 const telLink = `tel:${siteConfig.phone.replace(/\s/g, '')}`
 
 function ImFaq({ items }) {

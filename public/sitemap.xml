@@ -12,10 +12,12 @@
   <url><loc>https://www.astradentalclinic.com/pediatric-dentistry</loc></url>
   <url><loc>https://www.astradentalclinic.com/cosmetic-dentistry</loc></url>
   <url><loc>https://www.astradentalclinic.com/gallery</loc></url>
+  <!-- Hidden as of now — re-enable by uncommenting (kept, not removed)
   <url><loc>https://www.astradentalclinic.com/video-library</loc></url>
   <url><loc>https://www.astradentalclinic.com/testimonials</loc></url>
+  -->
   <url><loc>https://www.astradentalclinic.com/pricing</loc></url>
-  <url><loc>https://www.astradentalclinic.com/blog</loc></url>
+  <!-- <url><loc>https://www.astradentalclinic.com/blog</loc></url> -->
   <url><loc>https://www.astradentalclinic.com/faqs</loc></url>
   <url><loc>https://www.astradentalclinic.com/contact</loc></url>
   <url><loc>https://www.astradentalclinic.com/book-appointment</loc></url>

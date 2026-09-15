@@ -11,7 +11,7 @@ import { siteConfig } from '../constants/siteConfig'
 export const defaultSeo = {
   title: 'Astra Dental Clinic Chembur | Dr. Amit Pawar MDS | Implant & Perio Specialist Mumbai',
   description:
-    'Astra Dental Clinic in Chembur, Mumbai — led by Dr. Amit Rajabhau Pawar, BDS (GDC Mumbai), MDS in Periodontology & Implantology (SDC Chennai). World Record Holder. Expert in dental implants, laser dentistry, perio-plastic surgery, braces and smile makeover. Call +91 98605 32742.',
+    'Astra Dental Clinic in Chembur, Mumbai — led by Dr. Amit Rajabhau Pawar, BDS (GDC Mumbai), MDS in Periodontology & Implantology (SDC Chennai). World Record Holder. Expert in dental implants, laser dentistry, perio-plastic surgery, braces and smile makeover. Call +91 91377 52536.',
   image: `${siteConfig.canonicalBaseUrl}/og-image.svg`,
   type: 'website',
   keywords:

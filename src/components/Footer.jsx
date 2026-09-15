@@ -53,7 +53,8 @@ function Footer() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/our-team">Our Team</Link></li>
-            <li><Link to="/testimonials">Testimonials</Link></li>
+            {/* Hidden as of now — re-enable by uncommenting (kept, not removed) */}
+            {/* <li><Link to="/testimonials">Testimonials</Link></li> */}
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/book-appointment">Book Appointment</Link></li>
           </ul>
@@ -78,8 +79,9 @@ function Footer() {
           <h4>Explore</h4>
           <ul>
             <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/video-library">Video Library</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
+            {/* Hidden as of now — re-enable by uncommenting (kept, not removed) */}
+            {/* <li><Link to="/video-library">Video Library</Link></li> */}
+            {/* <li><Link to="/blog">Blog</Link></li> */}
             <li><Link to="/faqs">FAQs</Link></li>
             <li><Link to="/treatments">All Treatments</Link></li>
           </ul>

@@ -9,10 +9,10 @@
 import clinicReception from '../assets/images/IMG_1776.JPG.jpeg'
 import clinicLounge from '../assets/images/IMG_1775.JPG.jpeg'
 import treatmentRoom from '../assets/images/IMG_1886.JPG.jpeg'
-import gapBefore from '../assets/images/case-gap-before.jpg'
-import gapAfter from '../assets/images/case-gap-after.jpg'
-import crowdedBefore from '../assets/images/case-crowded-before.jpg'
-import crowdedAfter from '../assets/images/case-crowded-after.jpg'
+import smileBefore from '../assets/images/case-smile-transform-before.jpg'
+import smileAfter from '../assets/images/case-smile-transform-after.jpg'
+import orthoBefore from '../assets/images/case-ortho-correction-before.jpg'
+import orthoAfter from '../assets/images/case-ortho-correction-after.jpg'
 
 export const galleryItems = [
   {
@@ -33,15 +33,15 @@ export const beforeAfterCases = [
   {
     title: 'Smile Transformation',
     treatment: 'Cosmetic Dentistry',
-    before: gapBefore,
-    after: gapAfter,
+    before: smileBefore,
+    after: smileAfter,
     result: 'Natural white shade, improved symmetry and a confident, radiant smile.',
   },
   {
     title: 'Orthodontic Correction',
     treatment: 'Cosmetic Dentistry',
-    before: crowdedBefore,
-    after: crowdedAfter,
+    before: orthoBefore,
+    after: orthoAfter,
     result: 'Straighter, brighter teeth and a significantly more confident smile.',
   },
 ]

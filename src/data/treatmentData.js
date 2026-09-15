@@ -8,11 +8,11 @@
 
 import bracesImg from '../assets/images/IMG_1862.PNG'
 import smileBWImg from '../assets/images/IMG_1861.PNG'
-import implantModelImg from '../assets/images/treatment-implant.jpg'
-import rootCanalModelImg from '../assets/images/treatment-rootcanal.jpg'
-import whiteningImg from '../assets/images/treatment-whitening.jpg'
-import veneersImg from '../assets/images/treatment-veneers.jpg'
-import pediatricImg from '../assets/images/treatment-pediatric.jpg'
+import implantModelImg from '../assets/images/treatment-implant2.jpg'
+import rootCanalModelImg from '../assets/images/treatment-rootcanal2.jpg'
+import whiteningImg from '../assets/images/treatment-whitening2.jpg'
+import veneersImg from '../assets/images/treatment-veneers2.jpg'
+import pediatricImg from '../assets/images/treatment-pediatric2.jpg'
 
 export const treatments = [
   {

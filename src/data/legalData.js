@@ -13,7 +13,7 @@ export const legalPages = {
       'We maintain strict patient information confidentiality and process personal information only for appointment communication and treatment support.',
       'Data may be used for internal quality review, service updates and consented communication. We do not sell patient data.',
       'Cookies may be used to improve website experience and performance analytics.',
-      'For privacy concerns, contact hello@astradentalclinic.com.',
+      'For privacy concerns, contact astradental42@gmail.com.',
     ],
   },
   terms: {

@@ -16,11 +16,12 @@ const TeamPage = lazy(() => import('../pages/TeamPage'))
 const TreatmentsPage = lazy(() => import('../pages/TreatmentsPage'))
 const TreatmentDetailPage = lazy(() => import('../pages/TreatmentDetailPage'))
 const GalleryPage = lazy(() => import('../pages/GalleryPage'))
-const VideoLibraryPage = lazy(() => import('../pages/VideoLibraryPage'))
-const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'))
+// Hidden as of now — re-enable by uncommenting (kept, not removed)
+// const VideoLibraryPage = lazy(() => import('../pages/VideoLibraryPage'))
+// const TestimonialsPage = lazy(() => import('../pages/TestimonialsPage'))
 const PricingPage = lazy(() => import('../pages/PricingPage'))
-const BlogPage = lazy(() => import('../pages/BlogPage'))
-const BlogDetailPage = lazy(() => import('../pages/BlogDetailPage'))
+// const BlogPage = lazy(() => import('../pages/BlogPage'))
+// const BlogDetailPage = lazy(() => import('../pages/BlogDetailPage'))
 const FaqPage = lazy(() => import('../pages/FaqPage'))
 const ContactPage = lazy(() => import('../pages/ContactPage'))
 const AppointmentPage = lazy(() => import('../pages/AppointmentPage'))
@@ -44,11 +45,12 @@ function AppRouter() {
         <Route path="/our-team" element={<TeamPage />} />
         <Route path="/treatments" element={<TreatmentsPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/video-library" element={<VideoLibraryPage />} />
-        <Route path="/testimonials" element={<TestimonialsPage />} />
+        {/* Hidden as of now — re-enable by uncommenting (kept, not removed) */}
+        {/* <Route path="/video-library" element={<VideoLibraryPage />} /> */}
+        {/* <Route path="/testimonials" element={<TestimonialsPage />} /> */}
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogDetailPage />} />
+        {/* <Route path="/blog" element={<BlogPage />} /> */}
+        {/* <Route path="/blog/:slug" element={<BlogDetailPage />} /> */}
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/book-appointment" element={<AppointmentPage />} />

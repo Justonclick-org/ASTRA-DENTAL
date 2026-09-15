@@ -19,8 +19,8 @@ function ContactPage() {
   return (
     <>
       <SEOComponent
-        title="Contact Astra Dental Clinic Chembur | Call +91 98605 32742 | Dr. Amit Pawar"
-        description="Contact Astra Dental Clinic in Chembur, Mumbai. Call or WhatsApp Dr. Amit Pawar on +91 98605 32742. Located at Chembur Mayur CHSL, Tilak Nagar, Kurla. Emergency dental care available."
+        title="Contact Astra Dental Clinic Chembur | Call +91 91377 52536 | Dr. Amit Pawar"
+        description="Contact Astra Dental Clinic in Chembur, Mumbai. Call or WhatsApp Dr. Amit Pawar on +91 91377 52536. Located at Chembur Mayur CHSL, Tilak Nagar, Kurla. Emergency dental care available."
         keywords="contact dentist Chembur, dental clinic contact Mumbai, Astra Dental Clinic phone, Dr Amit Pawar appointment, dentist near Tilak Nagar, dentist near Kurla Mumbai, emergency dentist Chembur"
         path="/contact"
       />

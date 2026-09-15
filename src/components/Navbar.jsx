@@ -19,9 +19,10 @@ const navItems = [
   { label: 'About',        path: '/about' },
   { label: 'Treatments',   path: '/treatments' },
   { label: 'Gallery',      path: '/gallery' },
-  { label: 'Videos',       path: '/video-library' },
-  { label: 'Testimonials', path: '/testimonials' },
-  { label: 'Blog',         path: '/blog' },
+  // Hidden as of now — re-enable by uncommenting (kept, not removed)
+  // { label: 'Videos',       path: '/video-library' },
+  // { label: 'Testimonials', path: '/testimonials' },
+  // { label: 'Blog',         path: '/blog' },
   { label: 'Contact',      path: '/contact' },
 ]
 
@@ -44,7 +45,7 @@ function Navbar() {
 
   return (
     <header className={`site-header${scrolled ? ' sticky' : ''}`}>
-      <div className="emergency-bar">Emergency Consultation: +91 98605 32742</div>
+      <div className="emergency-bar">Emergency Consultation: +91 91377 52536</div>
       <div className="container nav-wrap">
         <Link to="/" className="logo">
           <img src={astraLogo} alt="Astra Dental" className="logo-image" />

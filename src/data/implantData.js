@@ -6,10 +6,11 @@
  * Contact: justonclick@2026
  */
 
-import fullMouthBefore from '../assets/images/case-missing-before.jpg'
-import restoredAfter from '../assets/images/case-missing-after.jpg'
-import anteriorBefore from '../assets/images/case-anterior-before.jpg'
-import zygomaticXray from '../assets/images/zygomatic-xray.jpg'
+import fullMouthBefore from '../assets/images/case-fullmouth-before.jpg'
+import fullMouthAfter from '../assets/images/case-fullmouth-after.jpg'
+import anteriorBefore from '../assets/images/case-singleimplant-before.jpg'
+import anteriorAfter from '../assets/images/case-singleimplant-after.jpg'
+import zygomaticXray from '../assets/images/case-zygomatic2.jpg'
 
 export const implantTrustBar = [
   'MDS — Periodontology & Implantology',
@@ -54,12 +55,12 @@ export const implantCases = [
   {
     label: 'Full Mouth Rehabilitation with All-on-6 Implants',
     before: fullMouthBefore,
-    after: restoredAfter,
+    after: fullMouthAfter,
   },
   {
     label: 'Single Anterior Implant',
     before: anteriorBefore,
-    after: restoredAfter,
+    after: anteriorAfter,
   },
   {
     label: 'Zygomatic Implant — Severe Bone Loss Case',

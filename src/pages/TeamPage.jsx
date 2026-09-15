@@ -60,9 +60,9 @@ function TeamPage() {
       <section className="team-values-strip">
         <div className="container team-values-inner">
           {[
-            { stat: '40+', label: 'Years Combined Experience' },
+            { stat: '25+', label: 'Years Combined Experience' },
             { stat: '5000+', label: 'Patients Treated' },
-            { stat: '3', label: 'Specialist Dentists' },
+            { stat: '2', label: 'Specialist Dentists' },
             { stat: '98%', label: 'Patient Satisfaction' },
           ].map((item) => (
             <div className="team-value-item" key={item.label}>
