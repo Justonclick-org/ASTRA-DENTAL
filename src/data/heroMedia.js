@@ -10,7 +10,6 @@ import clinicExterior from '../assets/images/IMG_1942.JPG.jpeg'
 import clinicReception from '../assets/images/IMG_1776.JPG.jpeg'
 import clinicLounge from '../assets/images/IMG_1775.JPG.jpeg'
 import treatmentRoom from '../assets/images/IMG_1886.JPG.jpeg'
-import patientSmile from '../assets/images/IMG_1860.PNG'
 
 export const heroSlides = [
   {
@@ -32,10 +31,5 @@ export const heroSlides = [
     image: treatmentRoom,
     title: 'State-of-the-art treatment room',
     caption: 'Advanced equipment for precise, comfortable procedures.',
-  },
-  {
-    image: patientSmile,
-    title: 'Real results from real patients',
-    caption: 'Natural, confident smiles delivered every day.',
   },
 ]

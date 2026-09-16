@@ -26,7 +26,7 @@ export const siteConfig = {
   socialLinks: {
     instagram: 'https://www.instagram.com/astradental.care',
     facebook: 'https://www.facebook.com/',
-    youtube: 'https://www.youtube.com/',
+    youtube: 'https://youtube.com/@astradental42',
     linkedin: 'https://www.linkedin.com/',
   },
   operatingHours: [

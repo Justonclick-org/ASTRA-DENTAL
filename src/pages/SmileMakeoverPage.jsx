@@ -424,9 +424,7 @@ function SmileMakeoverPage() {
                 </div>
               </div>
               <div className="sm-ba-info">
-                <p className="sm-ba-problem"><strong>Problem:</strong> {c.problem}</p>
-                <p className="sm-ba-treat"><strong>Treatment:</strong> {c.treatment}</p>
-                <p className="sm-ba-result"><strong>Result:</strong> {c.result}</p>
+                <p className="sm-ba-result"><strong>{c.problem}</strong></p>
               </div>
             </div>
           ))}
