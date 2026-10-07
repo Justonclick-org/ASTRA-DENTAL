@@ -6,9 +6,10 @@
  * Contact: justonclick@2026
  */
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { FaWhatsapp, FaPhone, FaCheckCircle, FaChevronDown, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import SEOComponent from '../components/SEOComponent'
+import { trackEvent } from '../analytics/gtm'
 import { siteConfig } from '../constants/siteConfig'
 import drAmitPhoto from '../assets/images/dr.amit.PNG'
 import gummyBefore from '../assets/images/case-gummy2-before.jpg'
@@ -213,6 +214,13 @@ function SmileLeadForm() {
   const [fields, setFields] = useState({ name: '', mobile: '', email: '' })
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
+  const formStartTracked = useRef(false)
+
+  const handleFormStart = () => {
+    if (formStartTracked.current) return
+    formStartTracked.current = true
+    trackEvent('form_start', { form_name: 'smile_consultation' })
+  }
 
   const validate = () => {
     const e = {}
@@ -252,7 +260,7 @@ function SmileLeadForm() {
   }
 
   return (
-    <form className="sm-form" onSubmit={handleSubmit} noValidate>
+    <form className="sm-form" onFocusCapture={handleFormStart} onSubmit={handleSubmit} noValidate>
       <div className="sm-form-group">
         <label htmlFor="sm-name">Full Name *</label>
         <input

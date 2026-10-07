@@ -6,8 +6,8 @@
  * Contact: justonclick@2026
  */
 
-import fullMouthBefore from '../assets/images/case-fullmouth-before.jpg'
-import fullMouthAfter from '../assets/images/case-fullmouth-after.jpg'
+import fullMouthBefore from '../assets/images/new-images/Full mouth Pre.jpeg'
+import fullMouthAfter from '../assets/images/new-images/Full mouth rehabilitation-after.JPG'
 import anteriorBefore from '../assets/images/case-singleimplant-before.jpg'
 import anteriorAfter from '../assets/images/case-singleimplant-after.jpg'
 import zygomaticXray from '../assets/images/case-zygomatic2.jpg'

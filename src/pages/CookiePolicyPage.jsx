@@ -13,7 +13,11 @@ function CookiePolicyPage() {
   const data = legalPages.cookie
   return (
     <>
-      <SEOComponent title="Cookie Policy | Astra Dental Clinic" path="/cookie-policy" />
+      <SEOComponent
+        title="Cookie Policy | Astra Dental Clinic"
+        description="Learn how cookies and similar technologies may be used on the Astra Dental Clinic website and how browser settings affect them."
+        path="/cookie-policy"
+      />
       <section className="container inner-page legal-page">
         <h1>{data.title}</h1>
         {data.sections.map((section) => (

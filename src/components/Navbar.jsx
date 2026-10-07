@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import { useBooking } from '../context/BookingContext'
 import { problemsWeSolve } from '../data/homeData'
@@ -27,6 +27,7 @@ const navItems = [
 ]
 
 function Navbar() {
+  const { pathname } = useLocation()
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false)
@@ -43,8 +44,10 @@ function Navbar() {
     openBooking()
   }
 
+  const solidHeader = scrolled || pathname !== '/'
+
   return (
-    <header className={`site-header${scrolled ? ' sticky' : ''}`}>
+    <header className={`site-header${solidHeader ? ' sticky' : ''}`}>
       <div className="emergency-bar">Emergency Consultation: +91 91377 52536</div>
       <div className="container nav-wrap">
         <Link to="/" className="logo">

@@ -11,12 +11,15 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
+import { initializeGtm } from './analytics/gtm'
 import './styles/global.css'
+
+initializeGtm()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter basename="/ASTRA-DENTAL">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </HelmetProvider>

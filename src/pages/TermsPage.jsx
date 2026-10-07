@@ -13,7 +13,11 @@ function TermsPage() {
   const data = legalPages.terms
   return (
     <>
-      <SEOComponent title="Terms & Conditions | Astra Dental Clinic" path="/terms-conditions" />
+      <SEOComponent
+        title="Terms & Conditions | Astra Dental Clinic"
+        description="Review the terms for using the Astra Dental Clinic website, requesting appointments and accessing general dental information."
+        path="/terms-conditions"
+      />
       <section className="container inner-page legal-page">
         <h1>{data.title}</h1>
         {data.sections.map((section) => (

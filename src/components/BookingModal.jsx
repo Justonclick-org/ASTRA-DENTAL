@@ -4,26 +4,32 @@ import { useBooking } from '../context/BookingContext'
 import AppointmentForm from './AppointmentForm'
 import { siteConfig } from '../constants/siteConfig'
 
+const WHATSAPP_METHOD = {
+  id: 'whatsapp',
+  icon: FaWhatsapp,
+  label: 'WhatsApp',
+  color: '#1a7c3e',
+  bg: '#f0fdf4',
+  border: '#86efac',
+  desc: 'Fill your details — WhatsApp opens pre-filled. We confirm within 2 hours.',
+}
+
+const GOOGLE_FORM_METHOD = {
+  id: 'google',
+  icon: FaClipboardList,
+  label: 'Google Form',
+  color: '#1d4ed8',
+  bg: '#eff6ff',
+  border: '#93c5fd',
+  desc: 'Structured form — your response goes directly to our team inbox.',
+}
+
 const METHODS = [
-  {
-    id: 'whatsapp',
-    icon: FaWhatsapp,
-    label: 'WhatsApp',
-    color: '#1a7c3e',
-    bg: '#f0fdf4',
-    border: '#86efac',
-    desc: 'Fill your details — WhatsApp opens pre-filled. We confirm within 2 hours.',
-  },
-  {
-    id: 'google',
-    icon: FaClipboardList,
-    label: 'Google Form',
-    color: '#1d4ed8',
-    bg: '#eff6ff',
-    border: '#93c5fd',
-    desc: 'Structured form — your response goes directly to our team inbox.',
-  },
+  WHATSAPP_METHOD,
+  ...(siteConfig.googleFormUrl ? [GOOGLE_FORM_METHOD] : []),
 ]
+
+const INITIAL_STEP = METHODS.length > 1 ? 'choose' : 'whatsapp'
 
 const STEP_TITLES = {
   choose: 'Book Your Appointment',
@@ -31,11 +37,11 @@ const STEP_TITLES = {
   google: 'Book via Google Form',
 }
 
-function ModalHeader({ step, onBack, onClose }) {
+function ModalHeader({ step, onBack, onClose, canGoBack }) {
   return (
     <div className="modal-header">
       <div className="modal-header-left">
-        {step !== 'choose' && (
+        {canGoBack && step !== 'choose' && (
           <button type="button" className="modal-back-btn" onClick={onBack} aria-label="Go back">
             <FaArrowLeft />
             <span>Back</span>
@@ -130,9 +136,9 @@ function GoogleStep({ onClose }) {
 
 function BookingModal() {
   const { isOpen, closeBooking } = useBooking()
-  const [step, setStep] = useState('choose')
+  const [step, setStep] = useState(INITIAL_STEP)
 
-  useEffect(() => { if (isOpen) setStep('choose') }, [isOpen])
+  useEffect(() => { if (isOpen) setStep(INITIAL_STEP) }, [isOpen])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -166,7 +172,12 @@ function BookingModal() {
 
       {/* <dialog> is the semantic modal element (fixes S6819) */}
       <dialog className="modal-card" open aria-label="Book Appointment">
-        <ModalHeader step={step} onBack={() => setStep('choose')} onClose={closeBooking} />
+        <ModalHeader
+          step={step}
+          onBack={() => setStep('choose')}
+          onClose={closeBooking}
+          canGoBack={METHODS.length > 1}
+        />
 
         {step === 'choose' && <ChooseStep onSelect={setStep} />}
         {step === 'whatsapp' && (

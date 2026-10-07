@@ -10,10 +10,12 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { siteConfig } from '../constants/siteConfig'
 
 function WhatsAppButton() {
+  const whatsappNumber = siteConfig.whatsapp.replace(/\D/g, '')
+
   return (
     <a
       className="floating-btn whatsapp"
-      href={`https://wa.me/${siteConfig.whatsapp}`}
+      href={`https://wa.me/${whatsappNumber}`}
       aria-label="Chat on WhatsApp"
       target="_blank"
       rel="noreferrer"

@@ -12,6 +12,7 @@ import SectionTitle from '../components/SectionTitle'
 import ContactForm from '../components/ContactForm'
 import Button from '../components/Button'
 import { contactInfo } from '../data/contactData'
+import { trackEvent } from '../analytics/gtm'
 
 import bannerImg from '../assets/images/IMG_1776.JPG.jpeg'
 
@@ -35,8 +36,8 @@ function ContactPage() {
 
       <section className="container inner-page">
         <SectionTitle eyebrow="Details" title="Clinic" accentTitle="Information" />
-        <div className="grid grid-2">
-          <article className="card simple-card">
+        <div className="grid grid-2 contact-details-grid">
+          <article className="card simple-card contact-details-card">
             <p><strong>Address:</strong> {contactInfo.address}</p>
             <p><strong>Phone:</strong> {contactInfo.phone}</p>
             <p><strong>WhatsApp:</strong> {contactInfo.whatsapp}</p>
@@ -51,6 +52,18 @@ function ContactPage() {
           </article>
           <ContactForm />
         </div>
+        <p className="inline-actions">
+          <a
+            className="btn btn-ghost"
+            href={contactInfo.mapLink}
+            target="_blank"
+            rel="noreferrer"
+            data-analytics-event="google_maps_click"
+            onClick={() => trackEvent('google_maps_click', { link_url: 'https://www.google.com/maps' })}
+          >
+            Open in Google Maps
+          </a>
+        </p>
       </section>
 
       <section className="container inner-page">

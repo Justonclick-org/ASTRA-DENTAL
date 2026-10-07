@@ -1866,8 +1866,13 @@ a.hero-stat:hover { background: var(--surface-soft); }
 
 /* â”€â”€ Breadcrumb â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .breadcrumb-wrap {
+  margin-top: 75px;
   border-bottom: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.92);
+}
+
+.site-header.sticky + .breadcrumb-wrap {
+  margin-top: 115px;
 }
 
 .breadcrumb-list {
@@ -2930,6 +2935,11 @@ a.footer-contact-item:hover { color: #e2e8f0; }
 
 /* â”€â”€ Mobile (â‰¤ 767px) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 767px) {
+  .contact-details-grid > * { min-width: 0; }
+  .contact-details-card { overflow-wrap: anywhere; }
+  .contact-details-grid .contact-form { grid-template-columns: minmax(0, 1fr); }
+  .contact-details-grid .contact-form .full { grid-column: 1; }
+
   body  { font-size: 16px; }
   h1    { font-size: 34px; }
   h2    { font-size: 28px; }

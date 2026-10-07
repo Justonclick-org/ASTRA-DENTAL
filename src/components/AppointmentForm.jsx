@@ -6,10 +6,11 @@
  * Contact: justonclick@2026
  */
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import Button from './Button'
 import { siteConfig } from '../constants/siteConfig'
+import { trackEvent } from '../analytics/gtm'
 
 const SLOT_GROUPS = [
   {
@@ -51,6 +52,13 @@ const initialForm = {
 function AppointmentForm({ onSuccess }) {
   const [form, setForm] = useState(initialForm)
   const [submitted, setSubmitted] = useState(false)
+  const formStartTracked = useRef(false)
+
+  const handleFormStart = () => {
+    if (formStartTracked.current) return
+    formStartTracked.current = true
+    trackEvent('form_start', { form_name: 'appointment' })
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -67,6 +75,13 @@ function AppointmentForm({ onSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    trackEvent('appointment_form_submit', {
+      booking_method: 'whatsapp',
+    })
+    trackEvent('appointment_booked', {
+      booking_method: 'whatsapp',
+      booking_status: 'request_sent_to_whatsapp',
+    })
     const lines = [
       "Hello Astra Dental Clinic! I'd like to book an appointment.",
       '',
@@ -88,7 +103,13 @@ function AppointmentForm({ onSuccess }) {
       .filter(Boolean)
       .join('\n')
 
-    window.open(`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(lines)}`, '_blank')
+    const whatsappNumber = siteConfig.whatsapp.replace(/\D/g, '')
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines)}`
+    trackEvent('whatsapp_click', {
+      link_url: `https://wa.me/${whatsappNumber}`,
+      source: 'appointment_form',
+    })
+    window.open(whatsappUrl, '_blank')
     setSubmitted(true)
     if (onSuccess) onSuccess()
   }
@@ -113,7 +134,12 @@ function AppointmentForm({ onSuccess }) {
   }
 
   return (
-    <form className="form-grid" aria-label="Book appointment" onSubmit={handleSubmit}>
+    <form
+      className="form-grid"
+      aria-label="Book appointment"
+      onFocusCapture={handleFormStart}
+      onSubmit={handleSubmit}
+    >
       <label>
         {'Full Name *'}
         <input

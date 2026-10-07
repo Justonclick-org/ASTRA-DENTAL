@@ -63,5 +63,6 @@ All editable content is externalized in src/data files:
 1. Update real clinic map, social links, and contact numbers if needed.
 2. Replace demo media URLs with licensed clinic assets.
 3. Connect forms to backend/API workflow.
-4. Add analytics script and cookie consent behavior if legally required.
-5. Rebuild and deploy to preferred static host.
+4. Configure GTM, analytics destinations, and consent behavior as described in `docs/ANALYTICS.md`.
+5. Rebuild and deploy to the canonical domain, ensuring the host base path and router basename agree.
+6. Validate mobile Core Web Vitals and Search Console indexing after deployment.

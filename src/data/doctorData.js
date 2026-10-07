@@ -24,7 +24,7 @@ export const doctors = [
   {
     id: 3,
     name: 'Dr. Manjiri Bhate',
-    qualification: 'BDS, MDS Orthodontics',
+    qualification: 'BDS (GDC Mumbai), MDS Orthodontics (SDC, Chennai)',
     experience: '10+ Years',
     specialization: 'Clear Aligners, Ceramic & Self-Ligating Braces, Adult & Teen Orthodontics, Bite Correction',
     memberships: ['Indian Orthodontic Society', 'IDA'],

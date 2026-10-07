@@ -13,7 +13,11 @@ function PrivacyPolicyPage() {
   const data = legalPages.privacy
   return (
     <>
-      <SEOComponent title="Privacy Policy | Astra Dental Clinic" path="/privacy-policy" />
+      <SEOComponent
+        title="Privacy Policy | Astra Dental Clinic"
+        description="Read how Astra Dental Clinic handles website inquiries, appointment requests, personal information and patient communications."
+        path="/privacy-policy"
+      />
       <section className="container inner-page legal-page">
         <h1>{data.title}</h1>
         {data.sections.map((section) => (

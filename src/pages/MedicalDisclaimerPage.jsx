@@ -13,7 +13,11 @@ function MedicalDisclaimerPage() {
   const data = legalPages.medicalDisclaimer
   return (
     <>
-      <SEOComponent title="Medical Disclaimer | Astra Dental Clinic" path="/medical-disclaimer" />
+      <SEOComponent
+        title="Medical Disclaimer | Astra Dental Clinic"
+        description="Important limitations on dental information published on the Astra Dental Clinic website; online content is not a substitute for clinical advice."
+        path="/medical-disclaimer"
+      />
       <section className="container inner-page legal-page">
         <h1>{data.title}</h1>
         {data.sections.map((section) => (

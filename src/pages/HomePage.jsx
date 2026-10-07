@@ -25,6 +25,8 @@ import { siteConfig } from '../constants/siteConfig'
 import drAmitPhoto from '../assets/images/dr.amit.PNG'
 
 function HomePage() {
+  const whatsappNumber = siteConfig.whatsapp.replace(/\D/g, '')
+
   return (
     <>
       <SEOComponent
@@ -175,7 +177,7 @@ function HomePage() {
               <FaPhone className="hp-tv-icon" />
               <span>{siteConfig.phone}</span>
             </a>
-            <a className="hp-tv-item hp-tv-link" href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noreferrer">
+            <a className="hp-tv-item hp-tv-link" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer">
               <FaWhatsapp className="hp-tv-icon hp-tv-icon--wa" />
               <span>WhatsApp Us</span>
             </a>

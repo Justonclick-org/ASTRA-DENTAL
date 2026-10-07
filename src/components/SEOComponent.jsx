@@ -6,9 +6,19 @@
  * Contact: justonclick@2026
  */
 
-import { Helmet } from 'react-helmet-async'
+import { useEffect } from 'react'
 import { defaultSeo } from '../seo/defaultSeo'
 import { siteConfig } from '../constants/siteConfig'
+
+function setMeta(attribute, value, content) {
+  let element = document.head.querySelector(`meta[${attribute}="${value}"]`)
+  if (!element) {
+    element = document.createElement('meta')
+    element.setAttribute(attribute, value)
+    document.head.appendChild(element)
+  }
+  element.setAttribute('content', content)
+}
 
 function SEOComponent({
   title,
@@ -18,6 +28,7 @@ function SEOComponent({
   image,
   type = 'website',
   schema = [],
+  noindex = false,
 }) {
   const pageTitle = title || defaultSeo.title
   const pageDescription = description || defaultSeo.description
@@ -25,49 +36,49 @@ function SEOComponent({
   const canonical = `${siteConfig.canonicalBaseUrl}${path}`
   const ogImage = image || defaultSeo.image
 
-  return (
-    <Helmet>
-      {/* Core */}
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      <meta name="keywords" content={pageKeywords} />
-      <meta name="author" content="Dr. Amit Pawar, Astra Dental Clinic" />
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-      <link rel="canonical" href={canonical} />
+  useEffect(() => {
+    document.title = pageTitle
+    setMeta('name', 'description', pageDescription)
+    setMeta('name', 'keywords', pageKeywords)
+    setMeta('name', 'author', 'Dr. Amit Pawar, Astra Dental Clinic')
+    setMeta(
+      'name',
+      'robots',
+      `${noindex ? 'noindex' : 'index'}, follow, max-snippet:-1, max-image-preview:large`,
+    )
+    setMeta('property', 'og:type', type)
+    setMeta('property', 'og:locale', 'en_IN')
+    setMeta('property', 'og:title', pageTitle)
+    setMeta('property', 'og:description', pageDescription)
+    setMeta('property', 'og:url', canonical)
+    setMeta('property', 'og:image', ogImage)
+    setMeta('property', 'og:image:width', '1200')
+    setMeta('property', 'og:image:height', '630')
+    setMeta('property', 'og:site_name', siteConfig.brandName)
+    setMeta('name', 'twitter:card', 'summary_large_image')
+    setMeta('name', 'twitter:title', pageTitle)
+    setMeta('name', 'twitter:description', pageDescription)
+    setMeta('name', 'twitter:image', ogImage)
 
-      {/* Geo */}
-      <meta name="geo.region" content="IN-MH" />
-      <meta name="geo.placename" content="Chembur, Mumbai, Maharashtra" />
-      <meta name="geo.position" content="19.0611;72.8997" />
+    let canonicalLink = document.head.querySelector('link[rel="canonical"]')
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link')
+      canonicalLink.rel = 'canonical'
+      document.head.appendChild(canonicalLink)
+    }
+    canonicalLink.href = canonical
 
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:locale" content="en_IN" />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content={siteConfig.brandName} />
+    document.head.querySelectorAll('[data-page-schema]').forEach((element) => element.remove())
+    schema.forEach((schemaItem, index) => {
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.dataset.pageSchema = String(index)
+      script.textContent = JSON.stringify(schemaItem)
+      document.head.appendChild(script)
+    })
+  }, [canonical, noindex, ogImage, pageDescription, pageKeywords, pageTitle, schema, type])
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={ogImage} />
-
-      {/* JSON-LD Schema */}
-      {schema.map((schemaItem) => (
-        <script
-          key={`${schemaItem['@type'] || 'schema'}-${schemaItem.name || schemaItem.headline || 'item'}`}
-          type="application/ld+json"
-        >
-          {JSON.stringify(schemaItem)}
-        </script>
-      ))}
-    </Helmet>
-  )
+  return null
 }
 
 export default SEOComponent

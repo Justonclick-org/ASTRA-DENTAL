@@ -25,7 +25,7 @@ export const siteConfig = {
     'https://www.google.com/maps?q=Bldg.%20No.%20123%2C%20Chembur%20Mayur%20CHSL%2C%20Dakshata%20Housing%20Society%2C%20Chembur%20West%2C%20Tilak%20Nagar%2C%20Kurla%2C%20Mumbai%2C%20Maharashtra%20400089',
   socialLinks: {
     instagram: 'https://www.instagram.com/astradental.care',
-    facebook: 'https://www.facebook.com/',
+    facebook: 'https://www.facebook.com/profile.php?id=61592979895321',
     youtube: 'https://youtube.com/@astradental42',
     linkedin: 'https://www.linkedin.com/',
   },
@@ -40,6 +40,6 @@ export const siteConfig = {
   googleFormUrl: '',
   // Step 2 (optional): Send → Embed icon → copy the src="..." URL → paste here for embedded form
   googleFormEmbedUrl: '',
-  canonicalBaseUrl: 'https://www.astradentalclinic.com',
+  canonicalBaseUrl: 'https://astradental.co.in',
   logo: '/logo-full.png',
 }

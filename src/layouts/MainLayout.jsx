@@ -14,6 +14,8 @@ import WhatsAppButton from '../components/WhatsAppButton'
 import CallButton from '../components/CallButton'
 import StickyAppointmentButton from '../components/StickyAppointmentButton'
 import BookingModal from '../components/BookingModal'
+import Breadcrumb from '../components/Breadcrumb'
+import AnalyticsTracker from '../analytics/AnalyticsTracker'
 import { BookingProvider } from '../context/BookingContext'
 import useScrollToTop from '../hooks/useScrollToTop'
 
@@ -22,7 +24,9 @@ function MainLayout() {
 
   return (
     <BookingProvider>
+      <AnalyticsTracker />
       <Navbar />
+      <Breadcrumb />
       <main>
         <Outlet />
       </main>
