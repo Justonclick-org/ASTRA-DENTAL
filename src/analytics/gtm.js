@@ -1,19 +1,18 @@
-const DEFAULT_GTM_ID = import.meta.env.VITE_GTM_ID
+/**
+ * GA4 Analytics via gtag.js
+ * Measurement ID is loaded via the gtag snippet in index.html (G-HHF14WMV6B)
+ * trackEvent pushes to dataLayer which gtag reads automatically.
+ */
 
 export function trackEvent(eventName, parameters = {}) {
   globalThis.dataLayer = globalThis.dataLayer || []
   globalThis.dataLayer.push({ event: eventName, ...parameters })
 }
 
-export function initializeGtm(containerId = DEFAULT_GTM_ID) {
-  globalThis.dataLayer = globalThis.dataLayer || []
-  if (!containerId || globalThis.__astraGtmInitialized) return
-
-  globalThis.__astraGtmInitialized = true
-  globalThis.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' })
-
-  const script = document.createElement('script')
-  script.async = true
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(containerId)}`
-  document.head.appendChild(script)
+/**
+ * @deprecated GTM removed — GA4 gtag is loaded directly in index.html.
+ * Kept as no-op so existing imports don't break.
+ */
+export function initializeGtm() {
+  // No-op: GA4 gtag.js is loaded in index.html <head>
 }
